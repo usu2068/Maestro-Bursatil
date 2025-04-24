@@ -1,0 +1,4 @@
+[28-Aug-2024 21:08:47 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_Writer_Abstract' not found in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Writer/Excel5.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Writer/Excel5.php on line 28

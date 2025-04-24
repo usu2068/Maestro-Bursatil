@@ -1,0 +1,4 @@
+[01-Sep-2024 10:57:12 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_Chart_Properties' not found in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Chart/Axis.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Chart/Axis.php on line 10

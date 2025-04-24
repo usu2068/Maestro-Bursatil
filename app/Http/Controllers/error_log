@@ -1,0 +1,8 @@
+[31-Aug-2024 14:47:59 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/__HomeController.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/__HomeController.php on line 20
+[31-Aug-2024 19:21:32 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/TutoriaController.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/TutoriaController.php on line 24

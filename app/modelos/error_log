@@ -1,0 +1,4 @@
+[03-Sep-2024 12:58:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/seicmvco/public_html/pru_master_4.1/app/modelos/Entidad.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/app/modelos/Entidad.php on line 7

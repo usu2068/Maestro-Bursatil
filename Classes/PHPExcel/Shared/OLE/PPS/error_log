@@ -1,0 +1,8 @@
+[28-Aug-2024 06:04:06 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_Shared_OLE_PPS' not found in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Shared/OLE/PPS/File.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Shared/OLE/PPS/File.php on line 30
+[05-Sep-2024 00:59:14 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPExcel_Shared_OLE_PPS' not found in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Shared/OLE/PPS/Root.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 30

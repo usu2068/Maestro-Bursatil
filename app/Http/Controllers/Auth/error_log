@@ -1,0 +1,4 @@
+[28-Aug-2024 16:51:09 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/Auth/RegisterController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/seicmvco/public_html/pru_master_4.1/app/Http/Controllers/Auth/RegisterController.php on line 11
