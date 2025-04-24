@@ -1,0 +1,810 @@
+/*○═════════════════════════════════════════════════════════════════════════○*/
+/* Colors Used in this Template.*/
+/*○══════════════════════════════════════════════════════════════════════════○*/
+
+
+/* Template Name: Triumph Creative.*/
+/* Version: 1.0 Initial Release*/
+/* Build Date: 22 Feb 2018*/
+/* Author: Unbranded.*/
+/* Website: http://www.unbrandeddesignstudio.com */
+/* Copyright: (C) 2018 */
+
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: */
+/*--------------------------------------------------------*/
+/* 01 |  PRIMARY COLOR  SETUP  */
+/* 02 |  BASIC COLOR  SETUP  */
+/* 03 |  COMMON COLOR  SETUP */
+/* 04 |  PAGE ELEMENTS COLOR  SETUP  */
+
+
+/*○══════════════════════════════════════════════════════════○*/
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+01 - PRIMARY COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+
+/*Main Color*/
+
+.prime {
+  color: #ffffff !important;
+}
+
+
+/*Highlight Color*/
+
+.theme {
+  color: #00DCD4 !important;
+}
+
+
+/*Common Text Color*/
+
+.letter {
+  color: #000 !important;
+}
+
+.dull-letter {
+  color: #858585 !important;
+}
+
+
+/*Opposite of Prime Color*/
+
+.dull {
+  color: #3B3B3B !important;
+}
+
+
+/*Main Background Color*/
+
+.prime-bg {
+  background-color: #ffffff;
+}
+
+
+/*Highlight Background Color*/
+
+.theme-bg {
+  background-color: #00DCD4;
+}
+
+
+/*Opposite of Prime Background Color*/
+
+.dull-bg {
+  background-color: #3B3B3B;
+}
+
+
+/*═════════*/
+
+
+/*Additional Colors*/
+
+
+/*═════════*/
+
+.light-prime {
+  color: #f1f1f1;
+}
+
+.light-prime-bg {
+  background-color: #f1f1f1;
+}
+
+.grey {
+  color: #969696;
+}
+
+.grey-bg {
+  background-color: #969696;
+}
+
+
+/*Elements*/
+/*
+a {
+  color: #000;
+}
+*/
+
+/*○═══════════════════════════════════════════════════════════════════════○
+02 - BASIC COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff !important;
+  background: #00DCD4 !important;
+}
+
+::selection {
+  color: #fff !important;
+  background: #00DCD4 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00DCD4 !important;
+  background: rgba(245, 245, 245, .8);
+}
+
+.slick-next,
+.slick-prev {
+  color: #000 !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #555 !important;
+}
+
+
+/*a {
+    color: #000 !important;
+    text-decoration: none;
+}*/
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+03 - COMMON COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+.mfp-close-btn-in .mfp-close {
+  color: #f2f2f2 !important;
+}
+
+.remodal {
+  color: #2b2e38;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.startblack {
+  background-color: #000;
+}
+
+
+/*to top button*/
+
+#return-to-top {
+  background-color: #f1f1f1 !important;
+  color: #000 !important;
+}
+
+#return-to-top i {
+  color: #000 !important;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#return-to-top:hover i {
+  color: #00DCD4 !important;
+}
+
+.theme-overlay {
+  background-color: #00DCD4;
+  opacity: .5;
+}
+
+.dark-overlay {
+  background-color: #000;
+}
+
+.prime-overlay {
+  background-color: #fff;
+  opacity: .4;
+}
+
+.fixed-link {
+  color: #000 !important;
+}
+
+.lb-data .lb-details {
+  color: #fff;
+}
+
+.overlay-cornershape .overlay-path {
+  fill: background-color: #000;
+}
+
+.progressbar {
+  background-color: #EEEEEE;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.proggress {
+  background-color: #3498db;
+}
+
+.percentCount {
+  color: #939393 !important;
+}
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+04 - PAGE ELEMENTS COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*HEADER, INTROS & NAVIGATIONS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.menu-ico-style {
+  background-color: #fff;
+}
+
+#nav-icon1 span:nth-child(2) {
+  background-color: #000;
+}
+
+.ub-svg-menu-items a {
+  color: #fff !important;
+}
+
+.ub-svg-menu-items a:hover {
+  color: #00DCD4 !important;
+}
+
+
+/*--------------------------*/
+
+
+/*Menu icon styles*/
+
+#nav-icon1 span:nth-child(1) {
+  background: #fff !important;
+}
+
+#nav-icon1 span:nth-child(2) {
+  background: #fff !important;
+}
+
+#nav-icon1 span:nth-child(3) {
+  background: #fff !important;
+}
+
+.menu-ico-style {
+  background: rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+
+/*--------------------------*/
+
+.tmh-active {
+  color: #00DCD4 !important;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* COMMON CLASSES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.thin-border {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.tmh-icon {
+  background-color: #fff;
+}
+
+.tmh-icon svg {
+  color: #00DCD4;
+}
+
+.tmh-icon-sml {
+  background-color: #fff;
+}
+
+.tmh-icon-sml svg {
+  color: #00DCD4;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* LAUNCHS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*HOME 01*/
+
+.home-01 {
+  --color-text: #fff;
+  --color-bg: #000 !important;
+  --color-link: #fff;
+  --color-link-hover: #37dbff;
+  --color-stitle: #fff;
+  --fontsize-stitle: 12vw;
+  --color-sdesc: #fff;
+  --color-slink: #f1f1f1;
+  --color-slink-hover: #000;
+  --color-slink-bg: #000 !important;
+  --color-slink-hover-bg: #37dbff;
+  --color-nav: #f1f1f1;
+  --color-nav-hover: #37dbff;
+}
+
+.home-section .slideshow path {
+  fill: #fff !important;
+}
+
+
+/*HOME 02*/
+
+.home-page-2 span {
+  background-color: #fff;
+}
+
+
+/*Home 03*/
+
+
+/*Home 03*/
+
+.home-page-3 h2 {
+  color: #fff !important;
+}
+
+.index-03 .ubscroll {
+  background-color: #00DCD4;
+}
+
+.home-page-3 span {
+  background-color: #000;
+  color: #fff;
+}
+
+
+/*Home 5*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* About */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.about-slide-btns {
+  border-bottom: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+}
+
+.about-blocks span {
+  color: #c9c9c9;
+}
+
+.about-blocks p {
+  color: #939393;
+}
+
+.tmh-btn {
+  background-color: #00DCD4 !important;
+  border: 1px solid #00DCD4 !important;
+  color: #fff !important;
+}
+
+.tmh-btn:hover {
+  background-color: transparent !important;
+  border: 1px solid #00DCD4 !important;
+  color: #000 !important;
+}
+
+.tmh-btn-2 {
+  background-color: transparent !important;
+  color: #111 !important;
+  border: 1px solid #797979 !important;
+}
+
+.tmh-btn-2:hover {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  color: #fff !important;
+}
+
+.tmh-btn-3 {
+  background-color: #00DCD4 !important;
+  border: 1px solid #00DCD4 !important;
+  color: #fff !important;
+}
+
+.tmh-btn-3:hover {
+  background-color: transparent !important;
+  border: 1px solid #00DCD4 !important;
+  color: #00DCD4 !important;
+}
+
+.tmh-btn-4 {
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.tmh-btn-4:hover {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  color: #fff !important;
+}
+
+.about-slider-heads .slick-current h3 {
+  color: #00DCD4 !important;
+}
+
+.about-slider-heads .slick-current span {
+  color: #000 !important;
+}
+
+.awards-blocks {
+  border-top: 1px solid #f1f1f1;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*POPULAR WORKS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.p-works-block:hover a {
+  background: rgba(0, 0, 0, .4) !important;
+}
+
+.p-works-block:hover span {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.p-works-block a {
+  background: rgba(245, 245, 245, .7) !important;
+}
+
+.p-works-block span {
+  color: #000 !important;
+  background-color: #fff;
+}
+
+.p-works-block span:hover {
+  background-color: #00DCD4 !important;
+  color: #000 !important;
+}
+
+.personel .p-works-block span {
+  border: 5px solid #000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Story */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+.tmh-overlay {
+  background: rgba(0, 220, 212);
+}
+
+.story-block-item:hover svg {
+  color: #00DCD4;
+}
+
+.story-blocks svg {
+  color: #cbcbcb;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*START NEW PROJECT*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.intermediate-two {
+  background: rgba(245, 245, 245, .5);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* BLOG */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.blog-block {
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fff;
+  border: 10px solid #fff;
+}
+
+.blog-block:hover a {
+  color: #00DCD4 !important;
+}
+
+.blog-block p {
+  color: #999;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*SUBSCRIBE NEWS LETTER*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.intermediate-three {
+  background: rgba(245, 245, 245, .5);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* PORTFOLIO */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.portfolio-one-block {
+  border: 10px solid #fff;
+}
+
+.portfolio-one-block a {
+  color: #000;
+  background: rgba(247, 247, 247, .6) !important;
+}
+
+
+/*TWO*/
+
+.portfolio-img-overlay {
+  background-color: rgba(245, 245, 245, .9);
+}
+
+.portfolio-img-overlay h3 {
+  background: rgba(245, 245, 245, .8);
+  border: 1px solid #000 !important;
+}
+.portfolio-img-overlay h3 a{
+    color: #000 !important;
+}
+
+.portfolio-filter-nav .active {
+  color: #00DCD4 !important;
+}
+
+
+/*three*/
+
+.portfolio-three-wrap .portfolio-img-overlay {
+  background-color: rgba(0, 220, 212, .9);
+}
+
+.portfolio-three-wrap .portfolio-img-overlay h3 {
+  background-color: #000 !important;
+  border: 1px solid transparent !important;
+}
+.portfolio-three-wrap .portfolio-img-overlay h3 a{
+  color: #fff !important;
+}
+
+.portfolio-three-wrap .portfolio-filter-nav .active {
+  color: #00DCD4 !important;
+}
+
+
+/*FOUR*/
+
+.portfolio-four-wrap .portfolio-img-overlay h3 {
+  color: #fff !important;
+}
+
+.portfolio-four-wrap .portfolio-img-overlay {
+  background-color: rgba(0, 220, 212, .9);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TWITTER UPDATES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.intermediate-four {
+  background: rgba(245, 245, 245, .5);
+}
+
+.twitter-light .tweet-text {
+  color: #000;
+}
+.twitter-light a {
+  color: #000 !important;
+}
+
+.twitter-light .tweet-name {
+  color: #000;
+}
+
+.twitter-light .date {
+  color: #000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TEAM */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.team-block {
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fff;
+  border: 10px solid #fff;
+}
+
+.team-block:hover p {
+  color: #00DCD4 !important;
+}
+
+.team-block p {
+  color: #cbcbcb !important;
+}
+
+.team-block a {
+  color: #fff !important;
+}
+
+.team-block li {
+  background-color: #000;
+}
+
+.team-block li:hover {
+  background-color: #fff !important;
+}
+
+.team-block li:hover a {
+  color: #000 !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TESTIMONIAL FEEDS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.client-list h5 {
+  color: #000;
+}
+
+.client-thumb-img:hover {
+  border: 5px solid #fff;
+}
+
+.client-thumb .slick-current {
+  border: 4px solid #00DCD4 !important;
+  background-color: #000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* CONTACT PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-form-outer input {
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf !important;
+}
+
+.contact-form-outer textarea {
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf !important;
+}
+
+.contact-form-outer input:focus {
+  border-bottom: 1px solid #000 !important;
+}
+
+.contact-form-outer textarea:focus {
+  border-bottom: 1px solid #000 !important;
+}
+
+.error-msg::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #e60000;
+}
+
+
+/*Thanks Messege*/
+
+.md-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.md-content h3 {
+  background: #f1f1f1;
+  color: #000;
+}
+
+.md-content>div p {
+  color: #777;
+}
+
+
+/*Error messege*/
+
+.error-msg::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e60000;
+}
+
+.error-msg:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #e60000;
+}
+
+.error-msg:-moz-placeholder {
+  /* Firefox 18- */
+  color: #e60000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* ACCESS TIPS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-detail-block:hover svg {
+  color: #00DCD4;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* SOCIAL ICONS */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+.social-icon-wrap {
+  background-color: #3B3B3B;
+}
+
+.icon-block span {
+  color: #fff !important;
+}
+
+.twit-bg {
+  background-color: #070707 !important;
+}
+
+.face-bg {
+  background-color: #222222 !important;
+}
+
+.pin-bg {
+  background-color: #333333 !important;
+}
+
+.beh-bg {
+  background-color: #444444 !important;
+}
+
+.dri-bg {
+  background-color: #222222 !important;
+}
+
+.twit-bg:hover {
+  background-color: #65a2d9 !important;
+}
+
+.face-bg:hover {
+  background-color: #4e598f !important;
+}
+
+.pin-bg:hover {
+  background-color: #862328 !important;
+}
+
+.beh-bg:hover {
+  background-color: #3a67fa !important;
+}
+
+.dri-bg:hover {
+  background-color: #cb462d !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.foot-txt-one {
+  color: #fff;
+}
+
+.foot-txt-one h4 {
+  color: #969696;
+}
+
+.foot-txt-one p {
+  color: #969696;
+}

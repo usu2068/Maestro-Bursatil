@@ -1,0 +1,2245 @@
+/*Mobile.css ( Responsive.css )*/
+/*○═════════════════════════════════════════════════════════════════════════○*/
+    /* INCLUDED 12 COMMON VIEWPORT STYLES
+○══════════════════════════════════════════════════════════════════════════○*/
+
+/* Template Name: Triumph Creative*/
+/* Version: 1.0 Initial Release*/
+/* Author: Alwin From Unbranded.*/
+/* Website: http://www.unbrandeddesignstudio.com */
+/* Copyright: (C) 2018 */    
+
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: */
+/*--------------------------------------------------------*/
+
+/*     ●  Larger Monitor ( 1920 )
+        ●  Macbook Pro 15 inch ( 1440 )
+        ●  Macbook Pro 13 inch ( 1280 )
+        ●  IPad Pro 12.9 inch ( 1024 )
+        ●  IPad Pro 10.5 inch ( 834 )
+        ●  IPad Pro 9.7 inch ( 768 )
+        ●  Big Phones landscape or tablets ( 736 | 630 )
+        ●  IPhone 8,7,6 + landscape ( 736 )
+        ●  IPhone 8,7,6 landscape ( 667 )
+        ●  IPhone 5Se landscape ( 568 )
+        ●  Medium phones ( 425 )
+        ●  IPhone 8,7,6 + ( 414 )
+        ●  Google Pixel ( 411 )
+        ●  IPhone 8,7,6 ( 375 )
+        ●  IPhone 5Se ( 320 )   */
+
+                                                                         
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1920px) {   /* 02 - LARGER MONITOR ( 22+ )*/ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 1920px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 1440px) {   /* 03 - MACBOOK PRO & AIR  2017 15",13" */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 1440px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*Home 2*/
+
+.home-2-text .mini-text {
+    top: -10%;
+    left: 24%;
+}
+.home-page-2 h2 {
+    font-size: 100px;
+    line-height: 105px;
+}
+
+/*Home 06*/
+
+.home-06-container li {
+    margin: 0px 30px;
+}
+.home-06-container li a {
+    font-size: 50px;
+    line-height: 50px;
+}
+.home-06-container p {
+    font-size: 13px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    line-height: 27px;
+}
+.home-06-container {
+    top: 55%;
+    left: 50%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 1280px) {   /* 04 - MACBOOK PRO 13" */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 1280px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*Home 2*/
+
+.home-2-text .mini-text {
+    top: -15%;
+    left: 20%;
+}
+.home-page-2 h2 {
+    font-size: 100px;
+    line-height: 105px;
+}
+
+/*Home 08*/
+
+.home-08-container h3 b {
+    font-size: 60px !important;
+    line-height: 60px !important;
+    font-weight: 100 !important;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 1024px) {   /* 05 - IPAD PRO  12.9" */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.menu-ico-style {
+    width: 50px;
+    height: 50px;
+    top: 2%;
+    right: 3%;
+}
+.container {
+    max-width: 1024px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*Home 02*/
+
+.home-page-2 h2 {
+    font-size: 100px;
+    line-height: 100px;
+}
+.home-page-2 h4 {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+.home-page-2 h5 {
+    font-size: 26px;
+    padding-left: 50px;
+}
+.home-2-text .mini-text {
+    display: none;
+}
+
+/*Home 03*/
+
+.home-page-3 span {
+    bottom: -18%;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 8px 0px 8px 10px;
+}
+
+/*Home 06*/
+
+.home-06-container li {
+    margin: 0px 27px;
+}
+.home-06-container p {
+    font-size: 14px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    line-height: 27px;
+}
+
+/*Home 07*/
+
+.home-07-container a {
+    font-size: 60px;
+    padding: 26px 28px;
+    margin-right: 0px;
+    border-radius: 15px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.home-07-container h3 b {
+    font-size: 80px !important;
+    text-align: left !important;
+    line-height: 80px !important;
+    font-weight: 100 !important;
+    display: inline-block;
+}
+.home-07-container .cd-words-wrapper {
+    text-align: center;
+}
+
+/*APP PAGE*/
+
+.app-landing .phone-frame {
+    position: relative;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transform: rotate(-20deg);
+}
+.app-preview .col-md-6 {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: -20%;
+    transform: scale(1.4);
+}
+.app-realeased {
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    right: -50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    z-index: 98;
+}
+.app-preview p {
+    font-size: 14px;
+    display: inline-block;
+     padding-right: 0%; 
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.statitics li {
+    display: inline-block;
+    padding: 0px 50px;
+}
+.ub-svg-menu-items .row {
+    margin-right: -15px;
+    margin-left: -100px !important;
+}
+
+/*Coming soon*/
+
+.coming-soon li {
+    padding: 0px 75px;
+}
+
+/*BLOG -02*/
+
+.blog-02 .blog-post {
+    padding: 40px 40px;
+    width: 90%;
+    margin: 15px 0px;
+}
+.blg-top-spacer-02 {
+    margin-top: 5px;
+}
+.blog-02 .blog-post h2 {
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 2% 0px;
+}
+.blog-02 .blog-post p {
+    font-size: 12px;
+    line-height: 26px;
+    margin: 2% 0px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 834px) {   /* 06 - IPAD PRO  10.5" */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.menu-ico-style {
+    width: 50px;
+    height: 50px;
+    margin: 0px !important;
+    top: 20px;
+    right: 20px;
+}
+#nav-icon1 {
+    right: 1px;
+    top: -2px;
+}
+.pad-btm-mdm {
+    padding-bottom: 12% !important;
+}
+.pad-top-mdm {
+    padding-top: 12% !important;
+}
+.container {
+    max-width: 1280px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.float-main {
+    width: 100%;
+}
+
+/*Home 01*/
+
+.home-page-2 h2 {
+    font-size: 70px;
+    line-height: 70px;
+}
+.home-page-2 h4 {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+/*HOME 05*/
+
+.home-05-container {
+    width: 100%;
+    margin: 0px;
+    background-image: url(../images/launch/05/cover/1m.svg);
+    background-size: cover;
+}
+.home-txt-pos {
+    width: 100%;
+    padding-left: 0%;
+    text-align: center;
+    bottom: -35%;
+    left: 50%;
+    height: 25%;
+}
+
+/*Home 06*/
+
+.home-06-container {
+    width: 100%;
+}
+.home-06-container li {
+    margin: 0px 35px;
+}
+
+/*Home 07*/
+
+.home-07-container a {
+    font-size: 50px;
+    padding: 22px 26px;
+    margin-right: 0px;
+    border-radius: 15px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.home-07-container h3 b {
+    font-size: 60px !important;
+    text-align: left !important;
+    line-height: 60px !important;
+    font-weight: 100 !important;
+    display: inline-block;
+}
+.home-07-container .cd-words-wrapper {
+    text-align: center;
+}
+/*intro*/
+.mega-intro-text h3 {
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: .8px;
+}
+.agency-image {
+    margin-left: 0%;
+    width: 30%;
+}
+.founder-image {
+    margin-left: 0%;
+    width: 30%;
+}
+.about-text-1 {
+    margin-top: 2%;
+    width: 66%;
+}
+.awards-blocks {
+    width: 20%;
+    margin: 0% 0% 0% 3%;
+}
+
+
+/*Story*/
+
+.story-block-item {
+    width: 40%;
+    margin-bottom: 80px;
+    display: inline-block;
+}
+.minus-margin {
+    margin-top: 0px !important;
+}
+.intermediate-two h1 {
+    font-size: 18px;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+.tmh-btn-wrap {
+    padding-top: 3%;
+}
+
+/*Blog*/
+
+
+.blog-block {
+    width: 32%;
+    margin-left: 0%;
+}
+.blog-quote-box {
+    padding: 10% 0% 2% 0%;
+}
+.intermediate-three h1 {
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+/*Contact*/
+
+.contact-detail-block {
+    width: 30%;
+    display: inline-block;
+}
+.contact-details {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*Coming soon*/
+.coming-soon {
+    width: 100%;
+}
+.coming-soon h2 {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 2px;
+}
+.coming-soon li {
+    padding: 0px 30px;
+}
+.coming-soon h3 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+.coming-soon ul {
+    padding-left: 0px;
+    width: 100% !important;
+}
+
+/*App landing*/
+
+.app-preview-mobile-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 95 !important;
+}
+.statitics li {
+    padding: 0px 35px;
+}
+
+
+/*PERSONA*/
+
+.expe-block {
+    margin-left: 12%;
+    width: 20%;
+    display: inline-block;
+}
+.expe-block span {
+    top: -15%;
+    left: -33%;
+    font-size: 50px;
+}
+
+/*Blog page*/
+
+.blg-img-cvr {
+    height: 0%;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 768px) {   /* 07 - IPAD PRO  9.7" */ 
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Home 01*/
+
+.slide__desc {
+    font-size: 18px;
+}
+.slide__title {
+    font-size: 160px !important;
+    line-height: 160px;
+    margin-bottom: 10px;
+}
+
+#team .slick-next {
+    right: 0px !important;
+}
+#team .slick-prev {
+    left: 0px !important;
+}
+.menu-ico-style {
+    width: 45px;
+    height: 45px;
+    margin: 0px !important;
+    top: 20px;
+    right: 20px;
+}
+#nav-icon1 {
+    right: 2.5px;
+    top: -4px;
+}
+.container {
+    max-width: 768px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*About*/
+.agency-image {
+    margin-left: 3%;
+    width: 28%;
+}
+
+/*Story*/
+
+.story-block-item {
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+/*Blog*/
+
+.blog-block {
+    width: 30%;
+    margin-left: 2%;
+}
+
+
+/*PERSONA*/
+
+.expe-block span {
+    top: -15%;
+    left: -37%;
+    font-size: 50px;
+}
+
+/*HOME 05*/
+
+.home-05-container {
+    width: 100%;
+    margin: 0px;
+    background-image: url(../images/launch/05/cover/1m.svg);
+    background-size: cover;
+}
+.home-txt-pos {
+    width: 100%;
+    padding-left: 0%;
+    text-align: center;
+    bottom: -35%;
+    left: 50%;
+    height: 25%;
+}
+/*Blog basic*/
+
+.basic-blog-post-path {
+    text-align: center !important;
+}
+.basic-blog-post-sidebar > div {
+    margin-bottom: 20%;
+    padding-left: 0%;
+}
+.blog-type-list li {
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+.comment-reply {
+    display: none;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 736px) and (min-width: 630px) {   /*Large phones landscape only*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*For particular device only*/
+
+.home-05-container {
+    background-image: url(../images/launch/05/cover/1.svg);
+}
+.home-txt-pos {
+    width: 100%;
+    padding-left: 0%;
+    text-align: left;
+    bottom: 45%;
+    left: 54%;
+    height: 25%;
+}
+.home-05-container h2 {
+    font-size: 24px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    line-height: 38px;
+}
+
+/*Home 07*/
+
+.home-07-container a {
+    font-size: 40px;
+    padding: 13px 19px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 15px;
+    line-height: 40px;
+}
+.home-07-container h3 b {
+    font-size: 40px !important;
+    text-align: left !important;
+    line-height: 40px !important;
+    font-weight: 100 !important;
+    display: inline-block;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 736px) {   /*IPHONE PLUS LANDSCAPE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.navigation-wrap {
+    width: 10%;
+    right: 10%;
+}
+.cl-effect-5 a {
+    overflow: hidden;
+    font-size: 22px;
+    padding: 0px 4px;
+    height: 30px !important;
+}
+
+/*Home -01*/
+
+.slide__title {
+    font-size: 90px !important;
+    line-height: 90px;
+    margin-bottom: 5px;
+}
+.slide__desc {
+    font-size: 16px;
+    margin: 0px 0 1em;
+    padding: 0 0em;
+}
+.slidenav {
+    padding: 5px;
+}
+
+/*Home 02*/
+
+.home-page-2 h2 {
+    font-size: 50px;
+    line-height: 50px;
+}
+.home-page-2 h4 {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+
+/*Home 03*/
+
+.home-page-3 h2 {
+    font-size: 100px;
+    margin: 30px;
+}
+.home-page-3 span {
+    bottom: -26%;
+    font-size: 12px;
+    padding: 8px 0px 8px 10px;
+}
+
+/*Home 04*/
+
+.home-page-4 h2 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    padding: 12px 12px 12px 30px;
+}
+
+/*Home 06*/
+
+.home-06-container li span {
+    font-size: 13px;
+    margin-top: 10%;
+    line-height: 13px;
+    letter-spacing: 4px;
+}
+.home-06-container li a {
+    font-size: 33px;
+    line-height: 33px;
+}
+.home-06-container p {
+    font-size: 12px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    line-height: 25px;
+}
+.home-06-container p {
+    font-size: 12px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    line-height: 24px;
+}
+
+
+/*App landing*/
+
+.app-landing .phone-frame {
+    display: none !important;
+}
+.tmh-app-heading h3 {
+    letter-spacing: 4px !important;
+    font-size: 22px !important;
+}
+.statitics li {
+    padding: 0px 20px;
+}
+.statitics h3 {
+    font-size: 28px;
+    line-height: 5px;
+}
+.app-head h2 {
+    font-size: 70px;
+    line-height: 70px;
+    margin-bottom: 10px;
+}
+.app-head p {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 4px;
+}
+.app-preview h3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 200;
+    margin-bottom: 9px;
+}
+.app-preview p {
+    font-size: 12px;
+    padding-right: 0%;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.app-realeased {
+    top: 50%;
+    right: -50%;
+}
+
+.intermediate-two h2 {
+    padding: 0px 20% !important;
+}
+.intermediate-three h2 {
+    padding: 0px 20% !important;
+}
+.intermediate-four h2 {
+    padding: 0px 20% !important;
+}
+.client-list h4 {
+    padding: 0px 20% !important;
+}
+.team-details-box {
+    text-align: center;
+}
+.icon-block {
+    padding: 3% 0%;
+}
+
+
+/*Blog page*/
+
+.blog-post p {
+    font-size: 13px;
+    line-height: 26px;
+    margin: 5% 0px;
+}
+
+/*Blog basic*/
+
+.basic-blog-post-path {
+    text-align: center !important;
+    padding-top: 10px;
+}
+.basic-blog-post-details {
+    text-align: center;
+}
+.comments {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.blg-side-bar {
+    display: none;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 667px) and (min-width: 660px) {   /*IPHONE 6 LANDSCAPE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*For particular device only*/
+.home-05-container {
+    background-image: url(../images/launch/05/cover/1.svg);
+}
+.home-txt-pos {
+    width: 100%;
+    padding-left: 0%;
+    text-align: left;
+    bottom: 45%;
+    left: 54%;
+    height: 25%;
+}
+.home-05-container h2 {
+    font-size: 24px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    line-height: 38px;
+}
+
+/*Home 06*/ 
+
+.home-08-container h3 b {
+    font-size: 40px !important;
+    line-height: 40px !important;
+}
+
+.logo-wrap {
+    width: 60px;
+    left: 30px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 568px) and (min-width: 567px) {   /*For landscape iphone 5se*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*For particular device only*/
+#desk-logo {
+    display: none;
+}
+.home-05-container {
+    background-image: url(../images/launch/05/cover/1.svg);
+}
+.home-txt-pos {
+    width: 100%;
+    padding-left: 0%;
+    text-align: left;
+    bottom: 45%;
+    left: 54%;
+    height: 25%;
+}
+.home-05-container h2 {
+    font-size: 20px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    line-height: 32px;
+}
+
+/*Home 08*/
+
+.home-08-container h3 b {
+    font-size: 40px !important;
+    line-height: 40px !important;
+}
+
+/*Personal*/
+
+.about-blocks h3 {
+    padding: 4% 15%;
+    font-size: 15px;
+}
+.expe-block span {
+    top: -5%;
+    left: -32%;
+    font-size: 37px;
+}
+.about-blocks p {
+    font-size: 12px;
+    line-height: 23px;
+}
+.expe-block {
+    margin-left: 11.5%;
+    width: 20%;
+    display: inline-block;
+}
+.portfolio-filter-nav li {
+    margin: 0px 18px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 568px) {   /*IPHONE PLUS LANDSCAPE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.navigation-wrap {
+    width: 10%;
+    right: 10%;
+}
+.cl-effect-5 a {
+    overflow: hidden;
+    font-size: 18px;
+    padding: 0px 4px;
+    height: 25px !important;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+    height: 2px;
+    width: 20%;
+    left: 28%;
+}
+#nav-icon1 span:nth-child(1) {
+    top: 15px;
+}
+#nav-icon1 span:nth-child(2) {
+    top: 21px;
+}
+#nav-icon1 span:nth-child(3) {
+    top: 27px;
+}
+#nav-icon1.open span:nth-child(1) {
+    top: 22px;
+}
+#nav-icon1.open span:nth-child(3) {
+    top: 22px;
+}
+#nav-icon1 {
+    right: 4.5px;
+    top: -4px;
+}
+.menu-ico-style {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
+}
+
+
+/*Home 01*/
+
+.slide__title {
+    font-size: 78px !important;
+    line-height: 78px;
+    margin-bottom: 5px;
+}
+.slide__desc {
+    font-size: 14px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 425px) {   /* 08 - Some Large phones.
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+#mob-logo {
+    display: block;
+}
+#desk-logo {
+    display: none;
+}
+.logo-wrap {
+    top: 20px;
+    width: 40px;
+    left: 20px;
+}
+
+.menu-ico-style {
+    width: 45px;
+    height: 45px;
+    margin: 0px !important;
+    top: 18px;
+    right: 18px;
+}
+.cl-effect-5 a {
+    font-size: 25px;
+    height: 35px !important;
+}
+#nav-icon1 {
+    right: 3px;
+    top: -1px;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+    height: 2px;
+    width: 24%;
+    left: 28%;
+}
+
+.pad-btm-mdm {
+    padding-bottom: 60px !important;
+}
+.pad-top-mdm {
+    padding-top: 60px !important;
+}
+
+.tmh-section-header {
+    margin-bottom: -38px;
+}
+.container {
+    max-width: 414px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*Home 01*/
+
+.tmh-btn-3 {
+    padding: 8px 25px;
+    margin-right: 0px;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+/*Home 02*/
+
+.home-page-2 h2 {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 0.8px;
+}
+
+/*Home 03*/
+
+.home-page-3 h2 {
+    font-size: 60px;
+    margin: 30px;
+}
+.home-page-3 span {
+    bottom: -47%;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 6px 6px 6px 6px;
+}
+
+/*Home 04*/
+
+
+.home-page-4 h2 {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    padding: 12px 12px 12px 30px;
+}
+
+/*Home 06*/
+
+.home-06-container li {
+    margin: 0px 16px;
+}
+.home-06-container li span {
+    font-size: 10px;
+    margin-top: 14px;
+    line-height: 10px;
+    letter-spacing: 4px;
+}
+.home-06-container p {
+    font-size: 11px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 0px 60px;
+    line-height: 20px;
+}
+
+/*Home 07*/
+
+.home-07-container a {
+    font-size: 40px;
+    padding: 13px 19px;
+    margin-right: 0px;
+    margin-bottom: -10px;
+    border-radius: 15px;
+    line-height: 40px;
+}
+.home-07-container h3 b {
+    font-size: 40px !important;
+    text-align: left !important;
+    line-height: 40px !important;
+    font-weight: 100 !important;
+    display: inline-block;
+}
+
+/*Home 08*/
+
+.home-08-container h3 b {
+    font-size: 30px !important;
+    line-height: 30px !important;
+}
+
+/*Personal*/
+
+.awards-blocks {
+    width: 33%;
+    margin: 0% 0% 4% 12% !important;
+    border-top: 0px solid #1c1f2d;
+}
+
+/*portfolio*/
+
+#portfolio .thin-border {
+    border-bottom: 0px solid #f1f1f1;
+}
+.portfolio-filter-nav li a {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.portfolio-filter-nav li {
+    margin: 0px 10px;
+}
+#filter {
+    padding-left: 0px !important;
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+    padding: 30px 0px;
+}
+
+/*Personal*/
+
+.app-preview h3 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+.app-preview p {
+    font-size: 14px;
+    padding-right: 0%;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.app-realeased {
+    padding-top: 30%;
+    background: transparent !important;
+    padding-bottom: 30%;
+}
+.app-preview-mobile-overlay {
+    display: none !important;
+}
+.story-blocks p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/*Coming soon*/
+
+.coming-soon li {
+    padding: 0px 18px;
+}
+.coming-soon h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    letter-spacing: 3px;
+}
+.coming-soon span {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+
+/*About*/
+.about-blocks h3 {
+    padding: 4% 0%;
+    font-size: 13px;
+}
+.about-blocks span {
+    font-size: 0px;
+    padding: 0px 3px;
+}
+.agency-image {
+    min-height: 200px;
+    margin-left: 3%;
+    width: 94%;
+}
+.about-slider-heads {
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+.tmh-progress {
+    width: 92% !important;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 30px;
+}
+.awards-blocks {
+    width: 33%;
+    margin: 0% 0% 0% 12%;
+}
+.founder-image {
+    min-height: 200px;
+    margin-left: 3%;
+    width: 94%;
+}
+.about-text-1 {
+    margin-top: 14%;
+    width: 90%;
+    margin-right: 4%;
+}
+.about-blocks h4 {
+    font-size: 13px;
+    line-height: 27px;
+    padding-bottom: 0% !important;
+    padding-top: 0% !important;
+}
+.about-blocks p {
+    font-size: 13px;
+    line-height: 28px;
+    margin-bottom: 12px;
+}
+
+/*Story*/
+.story-block-item {
+    width: 44%;
+    margin-bottom: 20px;
+}
+.story-blocks h4 {
+    font-size: 14px;
+    line-height: 23px;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+.tmh-icon {
+    width: 60px;
+    height: 60px;
+    padding-top: 3%;
+}
+.intermediate-two h1 {
+    font-size: 16px;
+    /*line-height: 24px;*/
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.intermediate-two h2 {
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tmh-btn-wrap {
+    padding-top: 5%;
+}
+.tmh-btn {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 15px;
+}
+.tmh-btn-2 {
+    font-size: 12px;
+    padding: 8px 25px;
+}
+.intermediate-two h2 {
+    padding: 0px 9% !important;
+}
+.intermediate-three h2 {
+    padding: 0px 9% !important;
+}
+.intermediate-four h2 {
+    padding: 0px 9% !important;
+}
+.client-list h4 {
+    padding: 0px 9% !important;
+}
+/*Blog*/
+.blog-block {
+    width: 96%;
+    margin-left: 2%;
+    margin-bottom: 30px;
+}
+.intermediate-three h1 {
+    padding-bottom: 4%;
+    padding-top: 4%;
+     font-size: 16px;
+}
+.intermediate-three h2 {
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 300;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.twitter-light .tweet-text {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.twitter-light .date {
+    font-size: 14px;
+}
+.team-block h3 {
+    font-size: 19px;
+    line-height: 26px;
+    padding-top: 0%;
+}
+
+/*Clients*/
+
+.client-list h3 {
+    font-size: 15px;
+    padding-right: 30px;
+    line-height: 23px;
+    padding-left: 30px;
+    padding-bottom: 3%;
+}
+.client-list h4 {
+    font-size: 12px;
+    line-height: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.client-thumb {
+    margin-top: 3%;
+    float: none !important;
+}
+.contact-form {
+    margin-right: 30px; 
+}
+.contact-detail-block h4 {
+    font-size: 13px;
+    line-height: 17px;
+    padding-bottom: 8%;
+    padding-top: 12%;
+}
+.contact-detail-block {
+    width: 32%;
+    display: inline-block;
+}
+.contact-detail-block p {
+    font-size: 11px;
+    line-height: 19px;
+}
+.icon-block {
+    width: 21%;
+    padding: 4% 0%;
+    margin: -3px;
+    height: 100%;
+}
+.icon-block span {
+    font-size: 16px;
+}
+.foot-txt-one h4 {
+    font-size: 10px;
+}
+.foot-txt-one h5 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .9px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+
+/*APP PAge*/
+
+.app-head h2 {
+    font-size: 50px;
+    line-height: 50px;
+}
+.app-head p {
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.app-preview h3 {
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+.statitics li {
+    padding: 0px 0px;
+    margin: 40px;
+}
+
+/*PERSONA*/
+
+.expe-block {
+    padding-left: 15%;
+    margin-left: 0px;
+    width: 100%;
+    display: block !important;
+}
+.tmh-sub-heading h3 {
+    letter-spacing: 2px !important;
+    font-size: 30px !important;
+}
+.tmh-sub-heading p {
+    font-size: 10px;
+    padding: 0px 10px;
+    padding-top: 2px !important;
+    margin-top: 13px;
+    letter-spacing: 3px;
+}
+
+/*404*/
+
+.error-page h2 {
+    font-size: 170px;
+}
+
+/*BLOG*/
+
+.blog-post {
+    padding: 30px 30px;
+    width: 90%;
+    margin: 20px 0px;
+}
+.blg-img-cvr {
+    height: 195px;
+}
+.blg-top-spacer {
+    margin-top: 5px;
+}
+
+/*BLOG -02*/
+
+.blog-02 .blog-post {
+    padding: 30px 30px;
+    width: 90%;
+    margin: 15px 0px;
+}
+.blog-02 .blog-post h2 {
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 5% 0px;
+}
+.blog-02 .blog-post p {
+    font-size: 12px;
+    line-height: 26px;
+    margin: 4% 0px;
+}
+
+/*HOME05*/
+
+.home-txt-pos {
+    padding-left: 0%;
+    text-align: center;
+    bottom: -10%;
+    left: 50%;
+    height: 20%;
+}
+.home-05-container h2 {
+    font-size: 34px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    line-height: 44px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 414px) {   /* 09 - APPLE IPHONE  8,7,6 PLUS, & GALAXY S7,S6.
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.menu-ico-style {
+    width: 45px;
+    height: 45px;
+    margin: 0px !important;
+    top: 18px;
+    right: 18px;
+}
+.cl-effect-5 a {
+    font-size: 25px;
+    height: 35px !important;
+}
+#nav-icon1 {
+    right: 3px;
+    top: -1px;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+    height: 2px;
+    width: 24%;
+    left: 28%;
+}
+.pad-btm-mdm {
+    padding-bottom: 60px !important;
+}
+.pad-top-mdm {
+    padding-top: 60px !important;
+}
+
+.container {
+    max-width: 414px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.intermediate-two h2 {
+    padding: 0px 9% !important;
+}
+.intermediate-three h2 {
+    padding: 0px 9% !important;
+}
+.intermediate-four h2 {
+    padding: 0px 9% !important;
+}
+.client-list h4 {
+    padding: 0px 9% !important;
+}
+
+.mega-intro-text h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/*About*/
+.about-blocks h3 {
+    padding: 4% 0%;
+    font-size: 13px;
+}
+.about-blocks span {
+    font-size: 0px;
+    padding: 0px 3px;
+}
+.agency-image {
+    min-height: 200px;
+    margin-left: 3%;
+    width: 94%;
+}
+.about-slider-heads {
+    margin-top: 15px;
+    margin-bottom: -30px;
+}
+.about-blocks p {
+    margin-bottom: 0px;
+}
+.about-content .tmh-btn {
+    margin-right: 20px;
+}
+.tmh-progress {
+    width: 92% !important;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 30px;
+}
+.awards-blocks {
+    width: 33%;
+    margin: 0% 0% 0% 12%;
+}
+.founder-image {
+    min-height: 200px;
+    margin-left: 3%;
+    width: 94%;
+}
+.about-text-1 {
+    margin-top: 15%;
+    width: 90%;
+    margin-right: 4%;
+    padding-bottom: 20px;
+}
+.about-blocks h4 {
+    font-size: 13px;
+    line-height: 22px;
+    padding-bottom: 0%;
+    padding-top: 5%;
+    margin-bottom: 20px;
+}
+
+/*Story*/
+.story-block-item {
+    width: 44%;
+    margin-bottom: 20px;
+}
+.story-blocks h4 {
+    font-size: 14px;
+    line-height: 23px;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+.tmh-icon {
+    width: 60px;
+    height: 60px;
+    padding-top: 3%;
+}
+.intermediate-two h1 {
+    font-size: 16px;
+    /*line-height: 24px;*/
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.intermediate-two h2 {
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 300;
+}
+.tmh-btn-wrap {
+    padding-top: 5%;
+}
+.tmh-btn {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 15px;
+}
+.tmh-btn-2 {
+    font-size: 12px;
+    padding: 8px 25px;
+}
+
+/*Blog*/
+.blog-block {
+    width: 96%;
+    margin-left: 2%;
+    margin-bottom: 30px;
+}
+.blog-quote-box {
+    padding: 10% 5% 5% 5%;
+}
+.blog-block p {
+    font-size: 13px;
+    line-height: 22px;
+}
+.intermediate-three h1 {
+    padding-bottom: 4%;
+    padding-top: 4%;
+     font-size: 16px;
+}
+.intermediate-three h2 {
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 300;
+}
+.twitter-light .tweet-text {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.twitter-light .date {
+    font-size: 14px;
+}
+.team-block h3 {
+    font-size: 19px;
+    line-height: 26px;
+    padding-top: 0%;
+}
+.portfolio-one-block a {
+    padding: 22px 0px;
+    bottom: 9%;
+    font-size: 12px;
+}
+
+/*Clients*/
+
+.client-list h3 {
+    font-size: 15px;
+    padding-right: 30px;
+    line-height: 23px;
+    padding-left: 30px;
+    padding-bottom: 3%;
+}
+.client-list h4 {
+    font-size: 12px;
+    line-height: 19px;
+}
+.client-thumb {
+    margin-top: 3%;
+    float: none !important;
+}
+.contact-form {
+    margin-right: 30px; 
+}
+.contact-detail-block h4 {
+    font-size: 13px;
+    line-height: 17px;
+    padding-bottom: 8%;
+    padding-top: 12%;
+}
+.contact-detail-block {
+    width: 28%;
+    display: inline-block;
+}
+.contact-detail-block p {
+    font-size: 11px;
+    line-height: 19px;
+}
+.icon-block {
+    width: 21%;
+    padding: 4% 0%;
+    margin: -3px;
+    height: 100%;
+}
+.icon-block span {
+    font-size: 16px;
+}
+.foot-txt-one h4 {
+    font-size: 10px;
+}
+.foot-txt-one h5 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .9px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+
+/*APP PAge*/
+
+.app-head h2 {
+    font-size: 50px;
+    line-height: 50px;
+}
+.app-head p {
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.app-preview h3 {
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+.statitics li {
+    padding: 0px 0px;
+    margin: 40px;
+}
+
+/*PERSONA*/
+
+.expe-block {
+    padding-left: 15%;
+    margin-left: 0px;
+    width: 100%;
+    display: block !important;
+}
+.tmh-sub-heading h3 {
+    letter-spacing: 2px !important;
+    font-size: 30px !important;
+}
+.tmh-sub-heading p {
+    font-size: 10px;
+    padding: 0px 10px;
+    padding-top: 2px !important;
+    margin-top: 13px;
+    letter-spacing: 3px;
+}
+
+/*404*/
+
+.error-page h2 {
+    font-size: 170px;
+}
+
+/*BLOG*/
+
+.blog-post {
+    padding: 30px 30px;
+    width: 90%;
+    margin: 20px 0px;
+}
+.blg-img-cvr {
+    height: 195px;
+}
+.blg-top-spacer {
+    margin-top: 5px;
+}
+
+/*BLOG -02*/
+
+.blog-02 .blog-post {
+    padding: 30px 30px;
+    width: 90%;
+    margin: 15px 0px;
+}
+.blog-02 .blog-post h2 {
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 5% 0px;
+}
+.blog-02 .blog-post p {
+    font-size: 12px;
+    line-height: 26px;
+    margin: 4% 0px;
+}
+
+/*HOME05*/
+
+.home-txt-pos {
+    padding-left: 0%;
+    text-align: center;
+    bottom: -10%;
+    left: 50%;
+    height: 20%;
+}
+.home-05-container h2 {
+    font-size: 34px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    line-height: 44px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 411px) {   /* 10- GOOGLE PIXEL
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 411px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 375px) {   /* 11- APPLE IPHONE 8,7,6
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.pad-btm-mdm {
+    padding-bottom: 80px !important;
+}
+.pad-top-mdm {
+    padding-top: 80px !important;
+}
+.container {
+    max-width: 375px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.tmh-section-header {
+    margin-bottom: -60px;
+}
+
+/*Home 02*/
+
+.home-page-2 h2 {
+    font-size: 38px;
+    line-height: 38px;
+    letter-spacing: 0.8px;
+}
+.home-page-2 h4 {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+/*About*/
+.about-slider-heads i {
+  display: none;
+}
+.abt-btns {
+    width: 23% !important;
+    padding-left: 5%;
+}
+.tmh-progress {
+    width: 70% !important;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 35px;
+}
+
+
+/*New project*/
+
+.intermediate-two h1 {
+    font-size: 14px;
+    line-height: 14px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.intermediate-two .tmh-btn {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 10px;
+}
+.intermediate-two h2 {
+    font-size: 12px;
+    line-height: 21px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.blog-quote-box {
+    padding: 10% 5% 2% 5%;
+}
+.intermediate-three h1 {
+    padding-bottom: 4%;
+    padding-top: 4%;
+    font-size: 14px;
+}
+.intermediate-three h2 {
+    font-size: 12px;
+    line-height: 21px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+.tmh-btn {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 0px;
+}
+.client-list h3 {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 3%;
+}
+.client-list h4 {
+    font-size: 12px;
+    line-height: 21px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.client-list h5 {
+    margin-top: 3%;
+}
+.client-thumb-img {
+    width: 50px !important;
+    height: 50px !important;
+}
+/*Twitter*/
+.twitter-light .tweet-text {
+    font-size: 16px;
+    line-height: 28px;
+}
+.twitter-light .date {
+    font-size: 14px !important;
+    margin-top: 20px;
+}
+
+/*Team*/
+.team-block a {
+    font-size: 15px;
+}
+.team-details-box {
+    text-align: center;
+}
+.client-list h3 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    padding-bottom: 4%;
+}
+.contact-form-outer {
+    padding: 50px;
+}
+.contact-detail-block {
+    margin-bottom: 0px;
+}
+.contact-detail-block {
+    width: 30%;
+}
+.foot-txt-one {
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+.icon-block {
+    width: 21%;
+    padding: 1% 0%;
+    margin: -3px;
+}
+.icon-block span {
+    font-size: 16px;
+}
+.icon-block {
+    width: 21%;
+    padding: 4% 0%;
+    margin: -3px;
+}
+.foot-txt-one h4 {
+    font-size: 10px;
+}
+.foot-txt-one h5 {
+    font-size: 15px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+/*Portfolio*/
+
+.portfolio-filter-nav li a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/*APP PAGE*/
+
+.intermediate-two h1 {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 360px) {   /* 11- GALAXY S8 & S8 PLUS ( 2016 common Phones )
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 360px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+/*APP PAGE*/
+
+.tmh-app-heading h3 {
+    letter-spacing: 3px !important;
+    font-size: 18px !important;
+}
+.statitics li {
+    padding: 0px 0px;
+    margin: 30px 0px;
+    width: 100%;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}@media only screen and (max-width: 320px) {   /* 12- APPLE IPHONE 5SE, 5S, 5.
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.intermediate-six {
+    min-height: 560px;
+}
+.menu-ico-style {
+    width: 45px;
+    height: 45px;
+    margin: 0px !important;
+    top: 18px;
+    right: 18px;
+}
+.tmh-section-header {
+    margin-bottom: -15px !important;
+}
+.cl-effect-5 a {
+    font-size: 25px;
+    height: 35px !important;
+}
+#nav-icon1 {
+    right: 3px;
+    top: -1px;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+    height: 2px;
+    width: 24%;
+    left: 28%;
+}
+
+/*Home 02*/
+
+.home-page-2 h2 {
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.8px;
+}
+
+/*Home 04*/
+
+.home-page-4 h2 {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    padding: 12px 12px 12px 30px;
+}
+
+/*Home 06*/
+.home-06-container li {
+    margin: 0px 10px;
+}
+.home-06-container p {
+    font-size: 11px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    padding: 0px 30px;
+    line-height: 17px;
+}
+
+/*Home 08*/
+
+.home-08-container h3 b {
+    font-size: 20px !important;
+    line-height: 20px !important;
+}
+.tmh-btn-4 {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+.home-06-container li a {
+    font-size: 24px;
+    line-height: 24px;
+}
+.home-06-container li span {
+    font-size: 10px;
+    margin-top: 14px;
+    line-height: 10px;
+    letter-spacing: 3px;
+}
+.container {
+    max-width: 320px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.tmh-section-header p {
+    font-size: 10px;
+    line-height: 19px;
+    padding-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.intermediate-two h1 {
+    font-size: 14px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.twitter-light .tweet-text {
+    font-size: 14px;
+    line-height: 28px;
+}
+.client-thumb-img {
+    width: 50px !important;
+    height: 50px;
+    margin: 0px 7px;
+}
+.icon-block {
+    width: 20%;
+    padding: 6% 0%;
+    margin: -1px;
+}
+.tmh-form-wrap {
+    width: 100% !important;
+}
+.contact-form-outer {
+    padding: 30px 10px;
+    border-radius: 0%;
+}
+.contact-detail-block {
+    margin-bottom: 30px;
+    width: 76%;
+}
+.tmh-section-header h3 {
+    font-size: 30px;
+    line-height: 30px;
+}
+.client-list h3 {
+    font-size: 14px;
+    line-height: 28px;
+    padding-bottom: 3%;
+}
+
+.intermediate-three h1 {
+    padding-bottom: 4%;
+    padding-top: 4%;
+    font-size: 16px;
+    line-height: 24px;
+}
+.tmh-btn {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-right: 0px;
+}
+.tmh-btn-2 {
+    font-size: 12px;
+    padding: 8px 25px;
+    margin-left: 10px;
+}
+.story-blocks p {
+    font-size: 11px;
+    line-height: 18px;
+}
+.progress-wrap h5 {
+    padding-bottom: 6%;
+    font-size: 11px;
+    letter-spacing: 0px;
+}
+.about-blocks h4 {
+    font-size: 10px;
+    line-height: 27px;
+    padding-bottom: 6%;
+}
+.about-slider-heads {
+    padding: 35px 0px !important;
+    margin: -10px 0px;
+}
+.about-slider-heads i {
+  /*font-style: normal !important;  */
+  display: none;
+}
+.abt-btns {
+    width: 23% !important;
+    padding-left: 5%;
+}
+.about-blocks h3 {
+    padding: 4% 0%;
+    font-size: 14px;
+}
+.tmh-progress {
+    width: 70% !important;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 35px;
+}
+.tmh-section-header {
+    padding-bottom: 30px !important;
+}
+.story-blocks {
+    padding-top: 30px !important;
+}
+.blog-block-wrap {
+    padding-top: 30px !important;
+}
+.portfolio-one-block-wrap {
+    padding-top: 30px !important; 
+}
+.team-block-wrap {
+    padding-top: 30px !important;
+}
+
+
+/*PERSONA*/
+
+.about-blocks h4 {
+    font-size: 10px;
+    line-height: 27px;
+    padding-bottom: 0%;
+    padding-top: 5%;
+}
+
+/*BLOG*/
+
+.blg-img-cvr {
+    height: 145px;
+}
+
+/*Coming soon*/
+
+.coming-soon li {
+    padding: 0px 10px;
+}
+.coming-soon h3 {
+    font-size: 18px;
+    margin-bottom: 3px;
+    line-height: 18px;
+    letter-spacing: 3px;
+}
+
+/*Portfolio*/
+
+.portfolio-filter-nav li {
+    margin: 0px 7px;
+    padding: 0px 0px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+}/*                          𝕥𝕙𝕚𝕤 𝕞𝕖𝕕𝕚𝕒 𝕢𝕦𝕖𝕣𝕚𝕖𝕤 𝕦𝕡𝕕𝕒𝕥𝕖𝕕 𝕨𝕚𝕥𝕙 2018 𝕤𝕥𝕒𝕟𝕕𝕒𝕣𝕕 𝕕𝕖𝕧𝕚𝕔𝕖 𝕤𝕖𝕝𝕖𝕔𝕥𝕚𝕠𝕟 𝕓𝕪  𝕨3𝕔.
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+

@@ -1,0 +1,832 @@
+/*○═════════════════════════════════════════════════════════════════════════○*/
+/* Colors Used in this Template.*/
+/*○══════════════════════════════════════════════════════════════════════════○*/
+
+
+/* Template Name: Triumph Creative.*/
+/* Version: 1.0 Initial Release*/
+/* Build Date: 22 Feb 2018*/
+/* Author: Unbranded.*/
+/* Website: http://www.unbrandeddesignstudio.com */
+/* Copyright: (C) 2018 */
+
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: */
+/*--------------------------------------------------------*/
+/* 01 |  PRIMARY COLOR  SETUP  */
+/* 02 |  BASIC COLOR  SETUP  */
+/* 03 |  COMMON COLOR  SETUP */
+/* 04 |  PAGE ELEMENTS COLOR  SETUP  */
+
+/*○══════════════════════════════════════════════════════════○*/
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+01 - PRIMARY COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+
+/*Main Color*/
+
+.prime {
+  color: #12141D;
+}
+
+
+/*Light shade of Main Color*/
+
+.light-prime {
+  color: #1c1f2d;
+}
+
+
+/*Highlight Color*/
+
+.theme {
+  color: #FF2152;
+}
+
+
+/*Common Text Color*/
+
+.letter {
+  color: #ffffff;
+}
+
+.dull-letter {
+  color: #858585;
+}
+
+
+/*Opposite of Prime Color*/
+
+.dull {
+  color: #3B3B3B;
+}
+
+
+/*#858585*/
+
+
+/*Main Background Color*/
+
+.prime-bg {
+  background-color: #12141D;
+}
+
+
+/*Light shade of bg Color*/
+
+.light-prime-bg {
+  background-color: #1c1f2d;
+}
+
+
+/*Highlight Background Color*/
+
+.theme-bg {
+  background-color: #FF2152;
+}
+
+
+/*Opposite of Prime Background Color*/
+
+.dull-bg {
+  background-color: #3B3B3B;
+}
+
+
+/*═════════*/
+
+
+/*Additional Colors*/
+
+
+/*═════════*/
+
+.grey {
+  color: #969696;
+}
+
+.grey-bg {
+  background-color: #969696;
+}
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+02 - BASIC COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff !important;
+  background: #FF2152 !important;
+}
+
+::selection {
+  color: #fff !important;
+  background: #FF2152 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FF2152 !important;
+  background: rgba(245, 245, 245, .8);
+}
+
+.slick-next,
+.slick-prev {
+  color: #000 !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #555 !important;
+}
+
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+03 COMMON COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+.mfp-close-btn-in .mfp-close {
+  color: #f2f2f2 !important;
+}
+
+.remodal {
+  color: #2b2e38;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.startblack {
+  background-color: #000;
+}
+
+
+/*to top button*/
+
+#return-to-top {
+  background-color: #1c1f2d !important;
+  color: #000 !important;
+}
+
+#return-to-top i {
+  color: #000 !important;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#return-to-top:hover i {
+  color: #FF2152 !important;
+}
+
+.theme-overlay {
+  background-color: #FF2152;
+}
+
+.dark-overlay {
+  background-color: #000;
+}
+
+.prime-overlay {
+  background-color: #000;
+  opacity: .5;
+}
+
+.fixed-link {
+  color: #000 !important;
+}
+
+.lb-data .lb-details {
+  color: #fff;
+}
+
+.overlay-cornershape .overlay-path {
+  fill: background-color: #000;
+}
+
+.progressbar {
+  background-color: #EEEEEE;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.proggress {
+  background-color: #3498db;
+}
+
+.percentCount {
+  color: #939393 !important;
+}
+
+.tmh-sub-heading p {
+  color: #858585 !important;
+  border: 1px solid #858585 !important;
+}
+
+
+/*○═══════════════════════════════════════════════════════════════════════○
+04 - PAGE ELEMENTS COLOR  SETUP 
+○═════════════════════════════════════════════════════════════════════════○*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*HEADER, INTROS & NAVIGATIONS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.ub-svg-menu-items a {
+  color: #fff !important;
+}
+
+.ub-svg-menu-items a:hover {
+  color: #FF2152 !important;
+}
+
+
+/*--------------------------*/
+
+
+/*Menu icon styles*/
+
+#nav-icon1 span:nth-child(1) {
+  background: #fff !important;
+}
+
+#nav-icon1 span:nth-child(2) {
+  background: #fff !important;
+}
+
+#nav-icon1 span:nth-child(3) {
+  background: #fff !important;
+}
+
+.menu-ico-style {
+  background: rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+
+/*--------------------------*/
+
+.tmh-active {
+  color: #FF2152 !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 02 - COMMON CLASSES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.thin-border {
+  border-bottom: 1px solid #1c1f2d;
+}
+
+.tmh-icon {
+  background-color: #fff;
+}
+
+.tmh-icon svg {
+  color: #FF2152;
+}
+
+.tmh-icon-sml {
+  background-color: #fff;
+}
+
+.tmh-icon-sml svg {
+  color: #FF2152;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* 03 - LAUNCHS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*HOME 01*/
+
+.home-01 {
+  --color-text: #fff;
+  --color-bg: #000 !important;
+  --color-link: #fff;
+  --color-link-hover: #37dbff;
+  --color-stitle: #fff;
+  --fontsize-stitle: 12vw;
+  --color-sdesc: #fff;
+  --color-slink: #f1f1f1;
+  --color-slink-hover: #000;
+  --color-slink-bg: #000 !important;
+  --color-slink-hover-bg: #37dbff;
+  --color-nav: #f1f1f1;
+  --color-nav-hover: #37dbff;
+}
+
+.home-section .slideshow path {
+  fill: #12141D !important;
+}
+
+
+/*HOME 02*/
+
+.home-page-2 span {
+  background-color: #fff;
+}
+
+
+/*Home 03*/
+
+.home-page-3 h2 {
+  color: #fff !important;
+}
+
+.index-03 .ubscroll {
+  background-color: #FF2152;
+}
+
+.home-page-3 span {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* About */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.about-slide-btns {
+  border-bottom: 1px solid #1c1f2d;
+  border-top: 1px solid #1c1f2d;
+}
+
+.about-blocks span {
+  color: #c9c9c9;
+}
+
+.about-blocks p {
+  color: #939393;
+}
+
+.tmh-btn {
+  background-color: #FF2152 !important;
+  border: 1px solid #FF2152 !important;
+  color: #fff !important;
+}
+
+.tmh-btn:hover {
+  background-color: transparent !important;
+  border: 1px solid #FF2152 !important;
+  color: #fff !important;
+}
+
+.tmh-btn-2 {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.tmh-btn-2:hover {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  color: #fff !important;
+}
+
+.tmh-btn-3 {
+  background-color: #FF2152 !important;
+  border: 1px solid #FF2152 !important;
+  color: #fff !important;
+}
+
+.tmh-btn-3:hover {
+  background-color: transparent !important;
+  border: 1px solid #FF2152 !important;
+  color: #FF2152 !important;
+}
+
+.tmh-btn-4 {
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.tmh-btn-4:hover {
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  color: #fff !important;
+}
+
+.about-slider-heads .slick-current h3 {
+  color: #FF2152 !important;
+}
+
+.about-slider-heads .slick-current span {
+  color: #858585 !important;
+}
+
+.awards-blocks {
+  border-top: 1px solid #1c1f2d;
+}
+
+.proggress {
+  background-color: #FF2152 !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*POPULAR WORKS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.p-works-block:hover a {
+  background: rgba(255, 33, 82, .7) !important;
+}
+
+.p-works-block:hover span {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.p-works-block a {
+  background: rgba(0, 0, 0, .4) !important;
+}
+
+.p-works-block span {
+  color: #fff !important;
+  background-color: #000;
+}
+
+.p-works-block span:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.personel .p-works-block span {
+  border: 5px solid #000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Story */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.tmh-overlay {
+  background: rgba(0, 220, 212);
+}
+
+.story-block-item:hover svg {
+  color: #FF2152;
+}
+
+.story-blocks svg {
+  color: #cbcbcb;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* BLOG */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.blog-block {
+  border-bottom: 1px solid #1c1f2d;
+  background-color: #12141D;
+  border: 10px solid #12141D;
+}
+
+.blog-block:hover a {
+  color: #000 !important;
+}
+
+.blog-block:hover p {
+  color: #000 !important;
+}
+
+.blog-block:hover {
+  background-color: #FF2152;
+  border: 10px solid #FF2152;
+  -webkit-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.06);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*SUBSCRIBE NEWS LETTER*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* PORTFOLIO */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.portfolio-one-block {
+  border: 10px solid #12141D;
+}
+
+.portfolio-one-block:hover {
+  border: 10px solid #FF2152;
+}
+
+.portfolio-one-block a {
+  color: #fff;
+  background: rgba(255, 33, 82, .7) !important;
+}
+
+.portfolio-one-block a:hover {
+  color: #FF2152;
+  background: rgba(0, 0, 0, .7) !important;
+}
+
+
+/*TWO*/
+
+.portfolio-img-overlay {
+  background: rgba(0, 0, 0, .7) !important;
+}
+
+.portfolio-img-overlay h3 {
+  background: rgba(0, 0, 0, .6) !important;
+  border: 1px solid #fff !important;
+}
+.portfolio-img-overlay h3 a{
+  color: #fff !important;
+}
+
+.portfolio-filter-nav .active {
+  color: #FF2152 !important;
+}
+
+
+/*FOUR*/
+
+.portfolio-four-wrap .portfolio-img-overlay h3 {
+  color: #000 !important;
+}
+
+.portfolio-four-wrap .portfolio-img-overlay {
+  background: rgba(255, 33, 82, .7) !important;
+}
+
+
+/*PERSONAL*/
+
+.personal-portfolio .portfolio-img-overlay {
+  background: rgba(255, 33, 82, .7) !important;
+}
+
+.personal-portfolio .portfolio-img-overlay h3 {
+  /*background: rgba(0,0,0,.6) !important;*/
+  border: none !important;
+  background-color: #000 !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TWITTER UPDATES*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.twitter-light .tweet-text {
+  color: #fff;
+}
+
+.twitter-light .tweet-name {
+  color: #fff;
+}
+
+.twitter-light .date {
+  color: #cbcbcb;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TEAM */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.team-block {
+  border-bottom: 1px solid #1c1f2d;
+  background-color: #12141D;
+  border: 10px solid #12141D;
+}
+
+.team-block:hover {
+  background-color: #FF2152;
+  border: 10px solid #FF2152;
+}
+
+.team-block:hover p {
+  color: #000 !important;
+}
+
+.team-block p {
+  color: #cbcbcb !important;
+}
+
+.team-block a {
+  color: #fff !important;
+}
+
+.team-block li {
+  background-color: #000;
+}
+
+.team-block li:hover {
+  background-color: #fff !important;
+}
+
+.team-block li:hover a {
+  color: #000 !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* TESTIMONIAL FEEDS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.client-list h5 {
+  color: #858585;
+}
+
+.client-thumb-img:hover {
+  border: 5px solid #fff;
+}
+
+.client-thumb .slick-current {
+  border: 4px solid #FF2152 !important;
+  background-color: #000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* CONTACT PAGE */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-form-outer input {
+  background-color: #12141D !important;
+  border-bottom: 1px solid #1c1f2d !important;
+  color: #fff !important;
+}
+
+.contact-form-outer textarea {
+  background-color: #12141D !important;
+  border-bottom: 1px solid #1c1f2d !important;
+  color: #fff !important;
+}
+
+.contact-form-outer input:focus {
+  border-bottom: 1px solid #FF2152 !important;
+}
+
+.contact-form-outer textarea:focus {
+  border-bottom: 1px solid #FF2152 !important;
+}
+
+.contact-form-outer input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #12141D inset !important;
+}
+
+.contact-form-outer input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  color: #fff !important;
+}
+
+.error-msg::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #e60000;
+}
+
+
+/*Thanks Messege*/
+
+.md-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.md-content h3 {
+  background: #1c1f2d;
+  color: #000;
+}
+
+.md-content>div p {
+  color: #777;
+}
+
+.cnt-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #fff !important;
+}
+
+.cnt-input:-moz-placeholder {
+  opacity: 1;
+  color: #fff !important;
+}
+
+.cnt-input::-moz-placeholder {
+  opacity: 1;
+  color: #fff !important;
+}
+
+.cnt-input:-ms-input-placeholder {
+  /* IE10+ */
+  opacity: 1;
+  color: #fff !important;
+}
+
+
+/*Error messege*/
+
+.error-msg::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e60000;
+}
+
+.error-msg:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #e60000;
+}
+
+.error-msg:-moz-placeholder {
+  /* Firefox 18- */
+  color: #e60000;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* ACCESS TIPS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact-detail-block:hover svg {
+  color: #FF2152;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* SOCIAL ICONS */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.social-icon-wrap {
+  background-color: #3B3B3B;
+}
+
+.icon-block span {
+  color: #fff !important;
+}
+
+.twit-bg {
+  background-color: #070707 !important;
+}
+
+.face-bg {
+  background-color: #222222 !important;
+}
+
+.pin-bg {
+  background-color: #333333 !important;
+}
+
+.beh-bg {
+  background-color: #444444 !important;
+}
+
+.dri-bg {
+  background-color: #222222 !important;
+}
+
+.twit-bg:hover {
+  background-color: #65a2d9 !important;
+}
+
+.face-bg:hover {
+  background-color: #4e598f !important;
+}
+
+.pin-bg:hover {
+  background-color: #862328 !important;
+}
+
+.beh-bg:hover {
+  background-color: #3a67fa !important;
+}
+
+.dri-bg:hover {
+  background-color: #cb462d !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.foot-txt-one {
+  color: #fff;
+}
+
+.foot-txt-one h4 {
+  color: #969696;
+}
+
+.foot-txt-one p {
+  color: #969696;
+}
