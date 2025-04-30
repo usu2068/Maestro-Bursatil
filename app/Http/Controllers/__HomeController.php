@@ -19,6 +19,9 @@ use Pixelpeter\Woocommerce;
 
 class HomeController extends Controller{
     /**
+     * middleware que asegura que el usuario este autenticado
+     * antes de acceder a cualquier metodo del controlador.
+     * 
      * Create a new controller instance.
      *
      * @return void
@@ -28,6 +31,10 @@ class HomeController extends Controller{
     }
 
     /**
+     * 
+     * Muestra el panel de inicio del usuario autenticado.
+     * Realiza validacion de licencias activas, carga usuarios, resultados recientes y simuladores.
+     * 
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
@@ -35,13 +42,18 @@ class HomeController extends Controller{
 
     public function index(){
  
+        //obtener todos los usuarios registrados en la plataforma
         $users = User::all();
+        //obtener el ID del usuario autenticado
         $id_user = Auth::id();
 
+        //obtener resultados recientes del simulador para este usuario
         $ult_resultados = LogAvanSimu::where([ 'id_user' => $id_user ])->get();
 
+        //obtener productos activos del usuario
         $prodsActivUser = ProductsOfUser::where([ "id_users" => $id_user])->get();
 
+        //validar si el producto ha vencido y eliminarlo si es asi
         foreach ( $prodsActivUser as $prodActivUser ) {
             
             $fechActiv = Carbon::parse($prodActivUser->fecha_activ);
@@ -49,6 +61,7 @@ class HomeController extends Controller{
             
             $diasDiferencia = $fechActua->diffInDays($fechActiv);
             
+            //elimina el producto si la licencia vencio y el usuario no es del perfil 3 (corporativo)
             if( $prodActivUser->dias_licen < $diasDiferencia && Auth::user()->id_perfil != 3 ){
 
                 ProductsOfUser::where([ 
@@ -60,15 +73,21 @@ class HomeController extends Controller{
             }else $vigencia = $prodActivUser->dias_licen - $diasDiferencia;
         }
 
+        //obtener simuladores y temas asociados para los ultimos resultados
         foreach ( $ult_resultados as $resultado ) {
             
             $sim_pres = Simulador::where([ 'id' => $resultado->id_simulador ])->get();
             $tems = TemasOfSimulador::where([ 'id_simulador' => $resultado->id_simulador ])->get();         
         }
 
+        //retorna a la vista de inicio con los datos obtenidos
         return view('home', compact('users', 'ult_resultados', 'sim_pres'));
     }
 
+    /**
+     * permite a un usuario reasignar su contraseña si no tiene una definida
+     * retorna mensajes HTML como respuesta.
+     */
     public function newPass( Request $request ){
 
         $msj_html='';
@@ -77,6 +96,7 @@ class HomeController extends Controller{
         if(empty($user)){
             $msj_html = '<p>No se registra una cuenta asociada a este correo, verifique e intente nuevamente.</p>';
         }else{
+            //solo permite establecer contraseña si no tenia una antes
             if(empty($user->password)){
                 $user->password = bcrypt($request->input('pass'));
                 $user->save();
@@ -91,7 +111,12 @@ class HomeController extends Controller{
         return $msj_html;
     }
 
+    /**
+     * Muestra el contenido HTML de la politica de uso
+     * se utiliza generalmente en una vista modal o seccion informativa.
+     */
     public function polUso(){
+        //texto de la politica de uso
         return '<p style="text-align: center;">MODO DE USO</p>
         <p style="text-align: justify; font-size: 12px;">En el Reglamento del Autorregulador del Mercado de Valores de Colombia (AMV) se establece que las personas naturales vinculadas al mercado de valores están obligadas a inscribirse en el Registro Nacional de Profesionales del Mercado de Valores (RNPMV), cuando dicha inscripción sea condición para actuar, por lo tanto dichos profesionales deberán acreditar su capacidad técnica y profesional con la aprobación de los exámenes de idoneidad profesional ante el AMV.</p>
         <p style="text-align: justify; font-size: 12px;">Teniendo en cuenta lo anterior, hemos desarrollado La plataforma – Maestro Bursátil®, el cual es una herramienta de e-learning de preparación para los exámenes de certificación ante el AMV aprobado por la Asociación de Comisionistas de Bolsa de Colombia - Asobolsa y La Bolsa de Valores de Colombia - BVC.</p>
@@ -107,6 +132,10 @@ class HomeController extends Controller{
         <p style="text-align: center;"> </p>';
     }
 
+    /**
+     * muestra el contenido HTML de la politica de privacidad.
+     * Informa sobre el tratamiento de datos personales del usuario
+     */
     public function polPriva(){
         return '<p style="font-size: 12.1599998474121px; line-height: 15.8079996109009px;" align="center"><strong>TRATAMIENTO DE LA INFORMACIÓN PERSONAL</strong><br /><strong><br /></strong></p>
         <p style="text-align: justify; font-size: 12px;">El Responsable de la información personal contenida en las bases de datos de <strong><span style="text-decoration: underline;">Maestro Bursátil</span></strong> es la (NIT: 900.054.586-0), con domicilio en la ciudad de Bogotá. Consultorías en Riesgo Corporativo Ltda se encuentra ubicada en la Carrera 11 A # 96-51 Oficina 203 (correo electrónico: soporte@maestrobursatil.com y teléfono: 6108161). Como responsable de los datos personales, Consultorías en Riesgo Corporativo Ltda es quien decide sobre las bases de datos y/o el Tratamiento de los datos personales de los Titulares de la información personal.</p>
@@ -129,7 +158,17 @@ class HomeController extends Controller{
         <p style="font-size: 12px; text-align: justify;">Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad. Estas modificaciones estarán disponibles al público a través de la página de Internet www.maestrobursatil.com o se las haremos llegar a la última dirección física o electrónica que nos haya proporcionado.</p>';
     }
 
+    /**
+     * Esta función accede al cliente de la API de WooCommerce configurado previamente mediante la clase estática Woocommerce, 
+     * y realiza una llamada GET sin un endpoint específico (''). Dependiendo de cómo esté configurada la clase Woocommerce, esto podría devolver 
+     * información general del sitio WooCommerce, como los detalles de la tienda, configuración o estado.
+     */
     public function woo(){
         return Woocommerce::get('');
     }
 }
+
+/**
+ * Este archivo funciona como un controlador de la pagina de inicio con multiples funciones, 
+ * en primera instancia mostrar politicas de protección de datos y visualizacion de objetos consultados recientemente
+ */
