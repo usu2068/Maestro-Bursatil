@@ -4,12 +4,30 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
+/**
+ * Kernel HTTP de la aplicación.
+ *
+ * Esta clase administra todos los middleware que se ejecutan durante el ciclo
+ * de vida de una solicitud HTTP, tanto globales como específicos por grupo o ruta.
+ *
+ * @package App\Http
+ */
+
 class Kernel extends HttpKernel
 {
     /**
      * The application's global HTTP middleware stack.
      *
      * These middleware are run during every request to your application.
+     *
+     * @var array
+     */
+
+     /**
+     * Middleware HTTP globales para la aplicación.
+     *
+     * Estos middleware se ejecutan durante cada solicitud a la aplicación,
+     * sin importar la ruta o controlador utilizado.
      *
      * @var array
      */
@@ -23,6 +41,17 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
+     *
+     * @var array
+     */
+
+     /**
+     * Grupos de middleware para rutas.
+     *
+     * Se pueden asignar a rutas o controladores usando el método `middleware()` en el archivo de rutas.
+     *
+     * - `web`: Incluye middleware para sesiones, cookies, CSRF y enlaces de rutas.
+     * - `api`: Diseñado para APIs, incluye control de tasa (`throttle`) y enlace de parámetros (`bindings`).
      *
      * @var array
      */
@@ -47,6 +76,15 @@ class Kernel extends HttpKernel
      * The application's route middleware.
      *
      * These middleware may be assigned to groups or used individually.
+     *
+     * @var array
+     */
+
+     /**
+     * Middleware individuales para rutas.
+     *
+     * Estos middleware pueden ser asignados directamente a rutas específicas
+     * mediante alias definidos en este arreglo.
      *
      * @var array
      */
