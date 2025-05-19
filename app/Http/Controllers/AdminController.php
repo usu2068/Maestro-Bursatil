@@ -1,4 +1,14 @@
 <?php
+
+/**
+ * AdminController.php
+ *
+ * Este controlador gestiona la administración de usuarios, entidades y productos.
+ * Implementa funciones para crear, editar, eliminar y ver usuarios, entidades y productos.
+ * Además, proporciona métodos para asignar productos a usuarios específicos.
+ */
+
+
 //include '\..\..\..\Clases\PHPExcel.php';
 //include '\..\..\..\Clases\PHPExcel\Reader\Excel2007.php';
 
@@ -44,11 +54,19 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;*/
 
 class AdminController extends Controller{
 
+	/**
+     * Constructor del controlador que aplica el middleware de autenticación.
+     */
 	public function __construct(){
 
         $this->middleware('auth');
     }
     
+	/**
+     * Muestra la vista de inicio del panel administrativo.
+     *
+     * @return \Illuminate\View\View
+     */
     function index(){
 
     	$logs_ini = array();
@@ -85,6 +103,17 @@ class AdminController extends Controller{
 
 /* - Administracion de Usuarios */
 
+/**
+     * Muestra la lista de usuarios disponibles para administración.
+     * 
+     * - Perfil 1: puede ver todos los usuarios.
+     * - Perfil 2: ve solo usuarios de su entidad.
+     * - Otros perfiles no tienen autorización y reciben mensaje de error.
+     * 
+     * @param Request $request
+     * @return \Illuminate\View\View Vista con listado de usuarios o mensaje de error.
+     */
+
     function view_user(Request $request){
 
     	/*$id_adm = $request->input('id_adm');
@@ -102,6 +131,15 @@ class AdminController extends Controller{
     	return view('amdUser', compact('users'));
     }
 
+	/**
+     * Muestra el formulario para crear un nuevo usuario.
+     * 
+     * - Perfil 1: puede seleccionar cualquier entidad.
+     * - Perfil 2: solo puede seleccionar su propia entidad.
+     * 
+     * @param Request $request
+     * @return \Illuminate\View\View Vista con formulario para crear usuario.
+     */
     function new_user(Request $request){ 
     	
     	if(Auth::user()->id_perfil == 1){
@@ -115,6 +153,15 @@ class AdminController extends Controller{
     	return view('amdUserNew', compact('ents', 'perfs')); 
     }
 
+	/**
+     * Guarda un nuevo usuario en la base de datos.
+     * 
+     * Valida que no exista un usuario con el mismo email.
+     * Asigna productos corporativos predeterminados si el perfil es 3.
+     * 
+     * @param Request $request Datos enviados por el formulario.
+     * @return \Illuminate\View\View|string Vista de confirmación o mensaje de error.
+     */
     function save_new_user(Request $request){ 
 
     	$newName = $request->input('newName');
@@ -196,6 +243,14 @@ class AdminController extends Controller{
 		
     }
 
+	/**
+     * Muestra el formulario para editar un usuario existente.
+     * 
+     * Carga datos del usuario, entidades y perfiles disponibles según permisos.
+     * 
+     * @param Request $request Contiene el id del usuario a editar.
+     * @return \Illuminate\View\View Vista con formulario para edición.
+     */
     function edit_user(Request $request){
 
     	$id_usr = $request->input('id_usr');
@@ -212,6 +267,15 @@ class AdminController extends Controller{
     	return view('amdUserEdit', compact('user','ents','perfs'));
     }
 
+	/**
+     * Guarda los cambios realizados a un usuario existente.
+     * 
+     * Actualiza nombre, email, cédula, entidad y perfil según los datos recibidos.
+     * Devuelve una respuesta con mensaje de éxito y un script para recargar datos.
+     * 
+     * @param Request $request Datos actualizados del usuario.
+     * @return string HTML con mensaje de éxito y script para refrescar vista.
+     */
     function edit_user_save(Request $request){
 
     	$id_usr = $request->input('id_usr');
@@ -256,13 +320,30 @@ class AdminController extends Controller{
     	return $script.$respEdit;
     }
 
+	/**
+ * Restablece la contraseña de un usuario.
+ * 
+ * Esta función genera una nueva contraseña basada en la cédula del usuario y el año actual.
+ * Luego, actualiza la contraseña del usuario en la base de datos.
+ * La nueva contraseña tiene el formato: [cedula][año actual].
+ * 
+ * @param Request $request Solicitud HTTP que contiene el ID del usuario a actualizar.
+ * @return string HTML que muestra un mensaje de éxito con la nueva contraseña generada.
+ */
+
     function reset_pass(Request $request){
 
-    	$id_usr = $request->input('id_usr');    	
+		// Obtener el ID del usuario desde la solicitud
+    	$id_usr = $request->input('id_usr');  
+		
+		// Obtener el usuario
     	$user = User::where([ "id" => $id_usr ])->first();
     	$user->password = bcrypt($user->cedula.date('Y'));
+		
+		// Guardar la nueva contraseña
 		$user->save();
 
+		// Mensaje de éxito con la nueva contraseña
 		$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -279,8 +360,20 @@ class AdminController extends Controller{
 		return $respEdit;
     }
 
+	/**
+ * Elimina un usuario del sistema.
+ * 
+ * Esta función intenta eliminar un usuario basado en su ID. 
+ * Además, se incluye manejo de excepciones para capturar errores durante el proceso.
+ * Los datos asociados al usuario (logs, productos, etc.) están comentados y no se eliminan.
+ * 
+ * @param Request $request Solicitud HTTP que contiene el ID del usuario a eliminar.
+ * @return string HTML con un mensaje de éxito o error.
+ */
+
     function delete_user(Request $request){
 
+		// Obtener el ID del usuario desde la solicitud
     	$id = $request->input('id_usr');
 
 /*PROBALO MAÑANA VIERNES !!!!!*/
@@ -299,8 +392,10 @@ class AdminController extends Controller{
 
     	try{
 
+			// Eliminar el usuario por ID
 			User::destroy($id);
 
+			// Mensaje de éxito
 			$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -316,6 +411,7 @@ class AdminController extends Controller{
 		
 		}catch(PDOException $e){
 
+			// Mensaje de error con el detalle del error capturado
 			$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -330,7 +426,7 @@ class AdminController extends Controller{
 			</div>';
 
 		}    	
-
+// Script para recargar la vista de usuarios
 		$script = "
 			<script>
 				$(function(){
@@ -350,6 +446,16 @@ class AdminController extends Controller{
 
 /* - Administracion de Entidades */
 
+/**
+ * Muestra el listado de entidades.
+ * 
+ * Si el usuario tiene perfil de administrador (id_perfil = 1), se obtienen todas las entidades.
+ * En caso contrario, se muestra un mensaje de acceso denegado.
+ * 
+ * @param Request $request Solicitud HTTP.
+ * @return \Illuminate\View\View Vista con las entidades o mensaje de acceso denegado.
+ */
+
     function view_entidad(Request $request){
 
     	if(Auth::user()->id_perfil == 1){
@@ -361,12 +467,30 @@ class AdminController extends Controller{
     	return view('amdEnts', compact('ents'));
     }
 
+	/**
+ * Muestra el formulario para crear una nueva entidad.
+ * 
+ * Obtiene todos los tipos de entidad para mostrarlos en el formulario de creación.
+ * 
+ * @param Request $request Solicitud HTTP.
+ * @return \Illuminate\View\View Vista con el formulario de creación de entidad.
+ */
     function new_entidad(Request $request){
 
 		$TipEnts = EntidadTipo::all();
 
     	return view('amdEntsNew', compact('TipEnts'));
     }
+
+	/**
+ * Guarda una nueva entidad en la base de datos.
+ * 
+ * Crea una nueva entidad con los datos proporcionados en el formulario. 
+ * Por defecto, el logo asignado es 'logo.jpg'.
+ * 
+ * @param Request $request Solicitud HTTP con los datos de la nueva entidad.
+ * @return string HTML con el mensaje de éxito.
+ */
 
     function new_entidad_save(Request $request){
 
@@ -379,6 +503,7 @@ class AdminController extends Controller{
 
 		//dd($newEnt);
 
+		// Crear la nueva entidad
 		Entidad::create([
         	"id_tipo_ent" => $newTipEnt, 
         	"nombre" => $newName, 
@@ -388,6 +513,7 @@ class AdminController extends Controller{
         	"licencia" => $newLicencia
 		]);
 
+		// Mensaje de éxito
 		$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -404,6 +530,14 @@ class AdminController extends Controller{
 		return $respEdit;
     }
 
+	/**
+ * Muestra el formulario para editar una entidad.
+ * 
+ * Obtiene los datos de la entidad seleccionada y todos los tipos de entidad disponibles.
+ * 
+ * @param Request $request Solicitud HTTP que contiene el ID de la entidad a editar.
+ * @return \Illuminate\View\View Vista con el formulario de edición de la entidad.
+ */
     function edit_entidad(Request $request){
 
     	$id_ent = $request->input('id_ent');
@@ -414,6 +548,14 @@ class AdminController extends Controller{
     	return view('amdEntsEdit', compact('ent','TipEnts'));
     }
 
+	/**
+ * Actualiza los datos de una entidad existente.
+ * 
+ * Se permite actualizar el nombre, NIT, dominio, licencia y tipo de entidad.
+ * 
+ * @param Request $request Solicitud HTTP con los datos actualizados.
+ * @return string HTML con el mensaje de éxito.
+ */
     function edit_entidad_save(Request $request){
 
     	$id_ent = $request->input('id_ent');
@@ -426,6 +568,7 @@ class AdminController extends Controller{
 
 		$edEnt = Entidad::where([ "id" => $id_ent ])->first();
 
+		// Actualizar los datos de la entidad
 		if($newName != '') $edEnt->nombre = $newName;
 		if($newNit != '') $edEnt->nit = $newNit;
 		if($newDominio != '') $edEnt->dominio = $newDominio;
@@ -433,6 +576,7 @@ class AdminController extends Controller{
 		$edEnt->id_tipo_ent = $newTipEnt;		
 		$edEnt->save();
 
+		// Mensaje de éxito
 		$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -449,12 +593,22 @@ class AdminController extends Controller{
 		return $respEdit;
     }
 
+	/**
+ * Elimina una entidad de la base de datos.
+ * 
+ * Esta función elimina la entidad especificada por ID.
+ * 
+ * @param Request $request Solicitud HTTP que contiene el ID de la entidad a eliminar.
+ * @return string HTML con el mensaje de éxito.
+ */
     function delete_ent(Request $request){
 
     	$id_ent = $request->input('id_ent');
 
+		 // Eliminar la entidad
     	Entidad::destroy($id_ent);
 
+		// Mensaje de éxito
     	$respEdit = '
 			<div class="alert alert-success alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -477,6 +631,16 @@ class AdminController extends Controller{
 
 /* - Administracion de productos */
 
+/**
+ * Muestra la lista de productos activos para usuarios autorizados.
+ * 
+ * Solo los usuarios con perfil de administrador (id_perfil = 1) o con perfil de operador (id_perfil = 2) 
+ * pueden acceder a la lista de productos activos.
+ * 
+ * @param Request $request Solicitud HTTP.
+ * @return \Illuminate\View\View|string Vista con los productos activos o mensaje de acceso denegado.
+ */
+
 	function activa_produc(Request $request){
 		
 		if(Auth::user()->id_perfil == 1 || Auth::user()->id_perfil == 2){
@@ -487,6 +651,16 @@ class AdminController extends Controller{
     		return $products;
     	}
 	}
+
+	/**
+ * Asigna un producto o un combo de productos a un usuario.
+ * 
+ * La asignación se realiza utilizando el email o la cédula del usuario.
+ * Si el producto es un combo, se asignan múltiples productos de manera automática.
+ * 
+ * @param Request $request Solicitud HTTP con los datos del usuario y producto.
+ * @return string HTML con el mensaje de respuesta.
+ */
 
 	function activa_produc_save(Request $request){
 
@@ -500,6 +674,7 @@ class AdminController extends Controller{
 
 		$user;
 
+		// Buscar usuario por cédula o email
 		if($CedulaUser != '') $user = User::where([ "cedula" => $CedulaUser ])->first();
 		else if($EmailUser != '') $user = User::where([ "email" => $EmailUser ])->first();		
 		else{
@@ -514,6 +689,7 @@ class AdminController extends Controller{
 
 			if($contProduc[0] == 'FULL'){
 
+				// Asignación de combo de productos
 				for($i = 1; $i<count($contProduc); ++$i){
 
 					$prodForUser = ProductsOfUser::where([ "id_users" => $user->id, "id_producto" => intval($contProduc[$i]) ])->first();
@@ -536,6 +712,7 @@ class AdminController extends Controller{
 
 			}else{
 
+				// Asignación de producto único
 				$prodForUser = ProductsOfUser::where([ "id_users" => $user->id, "id_producto" => $ProdActiv])->first();
 					
 				if(empty($prodForUser)){
@@ -560,6 +737,7 @@ class AdminController extends Controller{
 			}
 		}
 
+		// Mensaje de respuesta
 		$respEdit = '
 		<div class="alert alert-'.$styleAlert.' alert-bordered pd-y-20" role="alert" style="margin: 0px;">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -576,6 +754,13 @@ class AdminController extends Controller{
 
 /* - Administracion de Simuladores */
 
+/**
+ * Muestra la vista principal de administración de reportes de simuladores.
+ *
+ * Recupera todos los simuladores y logs generales de avance, y los pasa a la vista.
+ *
+ * @return \Illuminate\View\View
+ */
     function view_simu(){
 
 		$sims = Simulador::all();
@@ -584,6 +769,15 @@ class AdminController extends Controller{
     	return view('amdRepoSim', compact('sims', 'logsGene'));
     }
 
+	/**
+ * Procesa la generación del reporte de simuladores y tutorías en un archivo exportable.
+ *
+ * Filtra los registros por el rango de fechas recibido y prepara los encabezados y datos
+ * para ambas hojas del reporte (simuladores y tutorías). Luego llama al método exportador.
+ *
+ * @param \Illuminate\Http\Request $request Petición HTTP con los parámetros: selSim, fechIni, fechFin.
+ * @return \Illuminate\View\View
+ */
     function repoOpc(Request $request){
 
     	$idSim = $request->input('selSim');
@@ -607,6 +801,15 @@ class AdminController extends Controller{
     	return view( 'amdRepoSimOpc', compact( 'filRepo', 'fechIni', 'fechFin', 'idSim', 'nameArchi' ));
     }
 
+	/**
+ * Muestra el detalle de un intento del simulador para un usuario específico.
+ *
+ * Recupera el log del avance del simulador correspondiente al ID recibido.
+ *
+ * @param \Illuminate\Http\Request $request Petición con parámetros: id_log, id_usr, id_sim.
+ * @return \Illuminate\View\View
+ */
+
     function detalle_sim(Request $request){
     	
     	$id_log = $request->input('id_log');
@@ -618,6 +821,21 @@ class AdminController extends Controller{
     	return view('amdRepoSimDeta', compact('detLog'));
     }
 
+	/**
+ * Exporta los resultados de simuladores en formato CSV.
+ *
+ * El archivo se genera en la carpeta `reports/` con nombre `$nameArchi`.csv,
+ * y contiene datos como efectividad, preguntas correctas y fecha de presentación.
+ *
+ * Solo los usuarios con perfil 1 (administrador) pueden ver todos los registros;
+ * el resto solo verá datos pertenecientes a su entidad.
+ *
+ * @param array $cabsRepo Encabezados de la tabla.
+ * @param \Illuminate\Support\Collection $filRepo Datos a exportar (LogAvanSimu).
+ * @param string $nameArchi Nombre base del archivo (sin extensión).
+ *
+ * @return void
+ */
     function exportSim( $cabsRepo, $filRepo, $nameArchi ){
 
 	    $headers = array(
@@ -683,6 +901,11 @@ class AdminController extends Controller{
 
 /* - Administracion de Tutorias */
 
+/**
+ * Muestra la vista de administración de reportes de tutorías con los tutoriales y logs disponibles.
+ *
+ * @return \Illuminate\View\View
+ */
     function view_tuto(){
 
     	$tuts = Tutorial::all();
@@ -691,6 +914,13 @@ class AdminController extends Controller{
     	return view('amdRepoTut', compact('tuts', 'logsGene'));
     }
 
+
+	/**
+ * Procesa la solicitud del reporte de tutorías dentro de un rango de fechas, y genera el archivo exportado.
+ *
+ * @param \Illuminate\Http\Request $request
+ * @return \Illuminate\View\View
+ */
     function repoOpcTut(Request $request){
 
     	$idTut = $request->input('selTut');
@@ -710,6 +940,12 @@ class AdminController extends Controller{
     	return view('amdRepoTutOpc', compact('filRepo', 'fechIni', 'fechFin', 'idTut', 'nameArchi'));
     }
 
+	/**
+ * Muestra el detalle del avance en una tutoría específica, incluyendo los temas vistos por el usuario.
+ *
+ * @param \Illuminate\Http\Request $request
+ * @return \Illuminate\View\View
+ */
     function detalle_tut(Request $request){
     	
     	$tems_tut = array();
@@ -732,6 +968,14 @@ class AdminController extends Controller{
     	return view('amdRepoTutDeta', compact('detLog', 'tems_tut'));
     }
 
+	/**
+ * Exporta los datos del reporte de tutorías a un archivo CSV, incluyendo detalles por tema.
+ *
+ * @param array $cabsRepo Encabezados del reporte.
+ * @param \Illuminate\Support\Collection $filRepo Colección de registros de avance en tutorías.
+ * @param string $nameArchi Nombre del archivo a generar (sin extensión).
+ * @return void
+ */
     function exportTut( $cabsRepo, $filRepo, $nameArchi ){
 
 	    $headers = array(
@@ -826,6 +1070,19 @@ $_VIEWDATA['v_precioFinal'] = $objPHPExcel->getActiveSheet()->getCell('final')->
 
 
 */
+
+/**
+ * Exporta dos reportes generales en formato CSV: uno para simuladores y otro para tutorías.
+ *
+ * @param array $cabecerasReporteSimulador Encabezados del reporte de simuladores.
+ * @param array $filasReporteSimulador Datos del reporte de simuladores.
+ * @param string $nombreArchivoSimulador Nombre del archivo CSV para simuladores (sin extensión).
+ * @param array $cabecerasReporteTutorias Encabezados del reporte de tutorías (no utilizado aquí).
+ * @param array $filasReporteTutorias Datos del reporte de tutorías (no utilizado aquí).
+ * @param string $nombreArchivoTutorias Nombre del archivo CSV para tutorías (no utilizado aquí).
+ *
+ * @return void
+ */
 	function exportReporteGeneral(
 		$cabecerasReporteSimulador, 
 		$filasReporteSimulador, 
@@ -924,6 +1181,12 @@ $_VIEWDATA['v_precioFinal'] = $objPHPExcel->getActiveSheet()->getCell('final')->
 
 /* - Administracion de Ventas */
 	
+/**
+ * Muestra la vista de administración de ventas.
+ * Si el usuario es administrador (perfil 1), carga los usuarios con perfil de productor (perfil 4).
+ *
+ * @return \Illuminate\View\View Vista con la lista de productores.
+ */
 	function view_vent(){
 
 		if(Auth::user()->id_perfil == 1){

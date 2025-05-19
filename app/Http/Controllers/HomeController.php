@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+//importacion de clases necesarias del framework y del proyecto
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
+//modelos personalizados usados 
 use \App\modelos\ProductsOfUser;
 use \App\modelos\Producto;
 use \App\modelos\User;
@@ -15,11 +17,16 @@ use App\modelos\Simulador;
 use App\modelos\TemasOfSimulador;
 use App\modelos\LogAvanSimu;
 
+//Libreria externa para integrar con WooComerce
 use Pixelpeter\Woocommerce;
 
+/**
+ * controlador principal que gestiona el acceso a la vista home, recuperacion de contraseñas y politicas informativas.
+ */
 class HomeController extends Controller{
     /**
      * Create a new controller instance.
+     * Aplica el middleware 'auth' para requerir autenticación en todos los métodos.
      *
      * @return void
      */
@@ -29,38 +36,54 @@ class HomeController extends Controller{
 
     /**
      * Show the application dashboard.
+     * Muestra la vista principal del sistema ('home') con datos del usuario.
+     * Incluye:
+     * - Lista de todos los usuarios.
+     * - Últimos resultados del simulador del usuario autenticado.
+     * - Validación de vigencia de licencias activas.
+     * - Información de un simulador reciente (si existe).
      *
      * @return \Illuminate\Http\Response
      */
 
     public function index(){
  
+        //obtiene todos los usuarios registrados
         $users = User::all();
+
+        //obtiene el ID del usuario autenticado
         $id_user = Auth::id();
         $sim_pres = null;
 
+        //Recupera los ultimos resultados del simulador del usuario
         $ult_resultados = LogAvanSimu::where([ 'id_user' => $id_user ])->get();
 
+        //Obtiene los productos activos del usuario
         $prodsActivUser = ProductsOfUser::where([ "id_users" => $id_user])->get();
 
+        //recorre los productos activos para validar la vigencia de la licencia
         foreach ( $prodsActivUser as $prodActivUser ) {
             
             $fechActiv = Carbon::parse($prodActivUser->fecha_activ);
-            $fechActua = Carbon::parse(date('Y-m-d h:i:s'));
+            $fechActua = Carbon::parse(date('Y-m-d h:i:s')); //fecha actual
             
             $diasDiferencia = $fechActua->diffInDays($fechActiv);
             
+            //si la licencia esta vencida y el perfil del usuario no es 'corporativo' (perfil 3)
             if( $prodActivUser->dias_licen < $diasDiferencia && Auth::user()->id_perfil != 3 ){
 
+                //elimina el producto vencido
                 ProductsOfUser::where([ 
                     "id_users" => $id_user, 
                     "id_producto" => $prodActivUser->id_producto,
                     "fecha_activ" => $prodActivUser->fecha_activ
                 ])->delete();
 
+                //calcula dias restantes de vigencia
             }else $vigencia = $prodActivUser->dias_licen - $diasDiferencia;
         }
 
+        //retorna la vista 'home' con la informacion adecuada
         foreach ( $ult_resultados as $resultado ) {
             
             $sim_pres = Simulador::where([ 'id' => $resultado->id_simulador ])->get();
@@ -79,6 +102,10 @@ class HomeController extends Controller{
         
     }
 
+    /**
+     * Método para actualizar la contraseña de un usuario.
+     * Solo permite cambio si el campo password está vacío.
+     */
     public function newPass( Request $request ){
 
         $msj_html='';
@@ -87,20 +114,26 @@ class HomeController extends Controller{
         if(empty($user)){
             $msj_html = '<p>No se registra una cuenta asociada a este correo, verifique e intente nuevamente.</p>';
         }else{
+            //si no tiene contraseña asignada, permite registrarla
             if(empty($user->password)){
                 $user->password = bcrypt($request->input('pass'));
                 $user->save();
 
                 $msj_html = '<p>La contraseña se actualizo correctamente.</p>';    
             }else{
+                //ya tiene contraseña, no permite cambiarla desde esta ventana.
                 $msj_html = '<p>Usted ya reasigno su contraseña, si requiere restaurarla comuniquese con el administrador de su entidad.</p>'; 
             }
             
         }
 
+        /**
+         * Devuelve el contenido HTML de la politica de uso de la plataforma.
+         */
         return $msj_html;
     }
 
+    //politica de uso
     public function polUso(){
         return '<p style="text-align: center;">MODO DE USO</p>
         <p style="text-align: justify; font-size: 12px;">En el Reglamento del Autorregulador del Mercado de Valores de Colombia (AMV) se establece que las personas naturales vinculadas al mercado de valores están obligadas a inscribirse en el Registro Nacional de Profesionales del Mercado de Valores (RNPMV), cuando dicha inscripción sea condición para actuar, por lo tanto dichos profesionales deberán acreditar su capacidad técnica y profesional con la aprobación de los exámenes de idoneidad profesional ante el AMV.</p>
@@ -117,6 +150,7 @@ class HomeController extends Controller{
         <p style="text-align: center;"> </p>';
     }
 
+    // politica de privacidad
     public function polPriva(){
         return '<p style="font-size: 12.1599998474121px; line-height: 15.8079996109009px;" align="center"><strong>TRATAMIENTO DE LA INFORMACIÓN PERSONAL</strong><br /><strong><br /></strong></p>
         <p style="text-align: justify; font-size: 12px;">El Responsable de la información personal contenida en las bases de datos de <strong><span style="text-decoration: underline;">Maestro Bursátil</span></strong> es la (NIT: 900.054.586-0), con domicilio en la ciudad de Bogotá. Consultorías en Riesgo Corporativo Ltda se encuentra ubicada en la Carrera 11 A # 96-51 Oficina 203 (correo electrónico: soporte@maestrobursatil.com y teléfono: 6108161). Como responsable de los datos personales, Consultorías en Riesgo Corporativo Ltda es quien decide sobre las bases de datos y/o el Tratamiento de los datos personales de los Titulares de la información personal.</p>

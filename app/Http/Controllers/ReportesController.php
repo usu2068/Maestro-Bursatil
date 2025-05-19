@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
+//modelos utilizados para los reportes
 use App\modelos\Simulador;
 use App\modelos\TemasOfSimulador;
 use App\modelos\LogAvanSimu;
@@ -15,9 +16,19 @@ use App\modelos\ContenidoTuto;
 use App\modelos\TemasOfTutoria;
 use App\modelos\LogAvanTuto;
 
+/**
+ * Controlador para generar reportes personalizados de simuladores y tutorias por usuario.
+ */
 class ReportesController extends Controller{
 
 
+    /**
+     * Muestra el reporte de simuladores completados por el usuario autenticado
+     * 
+     * - Obtiene los registros de avance del simulador ('logavansimu') para el usuario actual
+     * - Por cada simulador accedido, recupera su nombre y los temas relacionados.
+     * - Prepara los datos y los envia a la vista 'reportesimper'
+     */
     public function simPersonal(){
 
     	$id_user = Auth::id();
@@ -48,6 +59,14 @@ class ReportesController extends Controller{
         return view('reporteSimPer', compact('ult_resultados', 'simuladores', 'temas'));
     }
 
+    /**
+     * Muestra el reporte de avance en tutorías del usuario autenticado.
+     *
+     * - Obtiene los registros de avance en tutorías (`LogAvanTuto`) del usuario.
+     * - Calcula el porcentaje de avance con base en los temas vistos vs. temas totales.
+     * - Obtiene el contenido de todas las tutorías.
+     * - Retorna la vista `reporteTutPer` con los datos recolectados.
+     */
     public function tutPersonal(){
 
         $id_user = Auth::id();
