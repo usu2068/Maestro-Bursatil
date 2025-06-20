@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
+
 Route::get('/', function () {
 
 	$products = DB::table('mb04_productos')->orderBy('nombre', 'asc')->get();
